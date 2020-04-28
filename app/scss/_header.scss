@@ -1,0 +1,19 @@
+.aside_left {
+width: 270px;
+background-color:  #fdf9ff;
+position: fixed;
+height: 100%;
+left:0;
+top:0;
+z-index: 10;
+border-right: 1px solid #e8dfec;
+
+}
+.main-content {
+  padding-left: 270px;
+}
+.section {
+  background-color: #f2f2fc;
+min-height: 100vh;
+}
+
