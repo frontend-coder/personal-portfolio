@@ -474,9 +474,66 @@
   margin: 0;
 }
 
+.service .container {
+  padding-bottom: 40px;
+}
+
+.service .service-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+  display: flex;
 
 
 
+  & .service-item-inner {
+    background-color: #fdf9ff;
+    border: 1px solid #d4d4e3;
+    border-radius: 10px;
+    padding: 30px 15px;
+    text-align: center;
+    transition: all .3s ease;
+
+    & .service-item-inner:hover {
+      box-shadow: 0 0 20px rgba(48, 46, 77, .15);
+    }
+
+    & .icon {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin: 0 auto 30px;
+      text-align: center;
+      border-radius: 50%;
+      transition: all .5s ease;
+    }
+
+    & .icon .fa {
+      font-size: 40px;
+      line-height: 60px;
+      transition: all .5s ease;
+    }
+
+    & h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #302e4d;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    & p {
+      font-size: 16px;
+      color: #504e70;
+      line-height: 25px;
+      margin: 0;
+    }
+  }
+}
+
+.service .service-item .service-item-inner:hover .icon .fa {
+  font-size: 25px;
+}
 
 
 // Документ pink.css 
@@ -484,12 +541,19 @@
   background-color: #ec1839;
 }
 
+.service .service-item .service-item-inner .icon .fa,
 .about .about-content .about-text h3 span,
 .aside_left .nav li a:hover,
 .aside_left .nav li a.active {
   color: #ec1839;
 }
 
+.service .service-item .service-item-inner:hover .icon .fa {
+  color: #fff;
+}
+
+
+.service .service-item .service-item-inner:hover .icon,
 .about .about-content .timeline .circle-dot,
 .about .about-content .timeline .timeline-item:before,
 .about .about-content .skills .skill-item .progress .progress-in,
