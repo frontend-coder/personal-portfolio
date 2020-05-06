@@ -73,8 +73,6 @@
 							<li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
 							<li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
 							<li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
-
-
 						</ul>
 					</div>
 				</div>
@@ -358,11 +356,10 @@
 							<button type="button" data-filter="web-design"> Web-дизайн </button>
 							<button type="button" data-filter="photography"> Фотография </button>
 							<button type="button" data-filter="wordpress"> WordPress </button>
-
 						</div>
 
 					</div>
-					<div class="row">
+					<div class="row portfolio-items">
 
 						<div class="portfolio-item padd-15" data-category="web-design">
 							<div class="portfolio-item-inner shadow-dark">
@@ -370,31 +367,31 @@
 									<img src="img/portfolio/1.jpg" alt="моя работа в портфолио">
 								</div>
 								<div class="portfolio-info">
-									<h4>Web-дизайн</h4>
+									<h4>web-design</h4>
 									<div class="icon"> <i class="fa fa-search"></i> </div>
 								</div>
 							</div>
 						</div>
 
-						<div class="portfolio-item padd-15" data-category="web-design">
+						<div class="portfolio-item padd-15" data-category="photography">
 							<div class="portfolio-item-inner shadow-dark">
 								<div class="portfolio-img">
 									<img src="img/portfolio/2.jpg" alt="моя работа в портфолио">
 								</div>
 								<div class="portfolio-info">
-									<h4>Web-дизайн</h4>
+									<h4>photography</h4>
 									<div class="icon"> <i class="fa fa-search"></i> </div>
 								</div>
 							</div>
 						</div>
 
-						<div class="portfolio-item padd-15" data-category="web-design">
+						<div class="portfolio-item padd-15" data-category="wordpress">
 							<div class="portfolio-item-inner shadow-dark">
 								<div class="portfolio-img">
 									<img src="img/portfolio/3.jpg" alt="моя работа в портфолио">
 								</div>
 								<div class="portfolio-info">
-									<h4>Web-дизайн</h4>
+									<h4>wordpress</h4>
 									<div class="icon"> <i class="fa fa-search"></i> </div>
 								</div>
 							</div>
@@ -406,40 +403,36 @@
 									<img src="img/portfolio/4.jpg" alt="моя работа в портфолио">
 								</div>
 								<div class="portfolio-info">
-									<h4>Web-дизайн</h4>
+									<h4>web-design</h4>
 									<div class="icon"> <i class="fa fa-search"></i> </div>
 								</div>
 							</div>
 						</div>
 
-
-						<div class="portfolio-item padd-15" data-category="web-design">
+						<div class="portfolio-item padd-15" data-category="photography">
 							<div class="portfolio-item-inner shadow-dark">
 								<div class="portfolio-img">
 									<img src="img/portfolio/5.jpg" alt="моя работа в портфолио">
 								</div>
 								<div class="portfolio-info">
-									<h4>Web-дизайн</h4>
+									<h4>photography</h4>
 									<div class="icon"> <i class="fa fa-search"></i> </div>
 								</div>
 							</div>
 						</div>
 
-						<div class="portfolio-item padd-15" data-category="web-design">
+						<div class="portfolio-item padd-15" data-category="wordpress">
 							<div class="portfolio-item-inner shadow-dark">
 								<div class="portfolio-img">
 									<img src="img/portfolio/6.jpg" alt="моя работа в портфолио">
 								</div>
 								<div class="portfolio-info">
-									<h4>Web-дизайн</h4>
+									<h4>wordpress</h4>
 									<div class="icon"> <i class="fa fa-search"></i> </div>
 								</div>
 							</div>
 						</div>
-
 					</div>
-
-
 
 				</div>
 			</section>
@@ -456,7 +449,7 @@
 	<div class="lightbox">
 		<div class="lightbox-content">
 			<div class="close-lightbpx">x</div>
-			<img src="img/portfolio/1.jpg" alt="lightbox img">
+			<img class="lightbox-img" src="img/portfolio/1.jpg" alt="lightbox img" onclick="nextItem()">
 			<div class="lightbox-caption">
 				<div class="caption-text">web-design</div>
 				<div class="caption-ciunter">1 из 6</div>
@@ -464,8 +457,8 @@
 
 		</div>
 		<div class="lightbox-controls">
-			<div class="prev-item"> <i class="fa fa-angle-left"></i> </div>
-			<div class="next-item"> <i class="fa fa-angle-right"></i> </div>
+			<div class="prev-item" onclick="prevItem()"> <i class="fa fa-angle-left"></i> </div>
+			<div class="next-item" onclick="nextItem()"> <i class="fa fa-angle-right"></i> </div>
 		</div>
 	</div>
 	<script src="js/scripts.min.js"></script>

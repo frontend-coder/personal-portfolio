@@ -4763,6 +4763,7 @@ body input:required:valid, body textarea:required:valid
   -webkit-transition: ease all .3s;
   -o-transition: ease all .3s;
   transition: ease all .3s;
+  outline: none;
 }
 
 .portfolio .portfolio-item
@@ -4772,6 +4773,52 @@ body input:required:valid, body textarea:required:valid
   flex: 0 0 33.33%;
   max-width: 33.33%;
   margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item.hide
+{
+  display: none;
+}
+
+.portfolio .portfolio-item.show
+{
+  display: block;
+  -webkit-animation: showItem .5s ease;
+  animation: showItem .5s ease;
+}
+
+@-webkit-keyframes showItem
+{
+  0%
+  {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100%
+  {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes showItem
+{
+  0%
+  {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100%
+  {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .portfolio .portfolio-item-inner
@@ -4901,8 +4948,10 @@ body input:required:valid, body textarea:required:valid
   height: auto;
   width: auto;
   max-width: 100%;
-  max-height: 430px;
+  max-height: 450px;
   cursor: pointer;
+  display: block;
+  padding: 30px 0;
 }
 
 .lightbox .lightbox-content
@@ -4910,10 +4959,46 @@ body input:required:valid, body textarea:required:valid
   position: relative;
 }
 
+.lightbox.open .lightbox-content
+{
+  -webkit-animation: lightboxImage .5s ease;
+  animation: lightboxImage .5s ease;
+}
+
+@-webkit-keyframes lightboxImage
+{
+  0%
+  {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100%
+  {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes lightboxImage
+{
+  0%
+  {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100%
+  {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .lightbox .lightbox-content .lightbox-caption
 {
   position: absolute;
-  bottom: -20px;
+  bottom: 0;
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -4926,15 +5011,17 @@ body input:required:valid, body textarea:required:valid
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+  z-index: -1;
+  padding: 5px 10px;
 }
 
 .lightbox .lightbox-content .close-lightbpx
 {
   position: absolute;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  top: -40px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  top: 0;
   right: 0;
   font-size: 32px;
   text-align: right;
