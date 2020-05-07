@@ -1,149 +1,134 @@
-
-
 /*==========  Desktop First  ==========*/
-@media only screen and (max-width : 1440px) {
+@media only screen and (max-width : 1440px) {}
+
+@media only screen and (max-width : 1280px) {}
+
+@media only screen and (max-width : 1200px) {}
+
+@media only screen and (max-width : 1199px) {
+	.aside_left {
+		left: -270px;
+	}
+
+	.main-content {
+		padding-left: 0;
+	}
+
+	.about .about-content .personal-info .info-item p span {
+		display: block;
+		margin-left: 0;
+	}
 
 }
 
-@media only screen and (max-width : 1280px) {
-
-}
-
-@media only screen and (max-width : 1200px) {
-
-}
-
-
-@media only screen and (max-width : 1190px) {
-
-}
+@media only screen and (max-width : 1190px) {}
 
 @media screen and (max-width: 1080px) {
-/* делать это разрешение */
+	/* делать это разрешение */
 }
+
 /* первое разрешение под казачика */
 @media only screen and (max-width: 1024px) {
-/* делать это разрешение */
+	/* делать это разрешение */
 
 }
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
 
+	.blog .blog-item,
+	.portfolio .portfolio-item,
+	.service .service-item {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
 }
 
 
-@media only screen and (max-width: 834px) {
+@media only screen and (max-width: 834px) {}
 
+@media only screen and (max-width: 812px) {}
 
-}
+@media only screen and (max-width: 800px) {}
 
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: 767px) {
 
+	/* делать это разрешение */
+	.contact .contact-form .col-6,
+	.blog .blog-item,
+	.service .service-item,
+	.about .about-content .experience,
+	.about .about-content .education,
+	.about .about-content .skills,
+	.about .about-content .personal-info {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
 
-}
-
-@media only screen and (max-width: 800px) {
-
-}
-
-@media only screen and (max-width: 768px) {
-/* делать это разрешение */
+	.portfolio .portfolio-filter button {
+		margin-bottom: 8px;
+	}
 }
 
 
 /* end  (max-width: 768px) */
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 740px) {}
 
-}
+@media only screen and (max-width: 736px) {}
 
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 734px) {}
 
-
-
-}
-
-@media only screen and (max-width: 734px) {
-
-
-
-}
-
-@media only screen and (max-width: 684px) {
-
-
-
-}
+@media only screen and (max-width: 684px) {}
 
 @media only screen and (max-width: 667px) {
-/* делать это разрешение */
+	/* делать это разрешение */
 
 
 }
 
-@media only screen and (max-width: 640px) {
-
-
-
-
-}
+@media only screen and (max-width: 640px) {}
 
 @media only screen and (max-width: 600px) {
-/* делать это разрешение */
+	/* делать это разрешение */
 
 
 }
 
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 575px) {
 
-
-
+	.contact .contact-info-item,
+	.portfolio .portfolio-item {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
 }
+
+@media only screen and (max-width: 568px) {}
 
 @media only screen and (max-width: 480px) {
-/* делать это разрешение */
+	/* делать это разрешение */
 
 
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 425px) {}
 
+@media only screen and (max-width: 414px) {}
 
-
-}
-
-@media only screen and (max-width: 414px) {
-
-
-
-}
-
-@media only screen and (max-width: 412px) {
-
-
-
-}
+@media only screen and (max-width: 412px) {}
 
 @media only screen and (max-width: 384px) {
-/* делать это разрешение */
+	/* делать это разрешение */
 
 
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) {}
 
-
-
-}
-
-@media only screen and (max-width: 360px) {
-
-
-
-}
+@media only screen and (max-width: 360px) {}
 
 @media only screen and (max-width: 320px) {
-/* делать это разрешение */
+	/* делать это разрешение */
 
 
 }
@@ -156,20 +141,13 @@
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@media (min-width: 576px) {}
 
-	}
 /* Medium devices (tablets, 768px and up)  */
-@media (min-width: 768px) {
+@media (min-width: 768px) {}
 
-	 }
 /* Large devices (desktops, 992px and up)  */
-@media (min-width: 992px) {
+@media (min-width: 992px) {}
 
-
-	}
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-
-}
+@media (min-width: 1200px) {}

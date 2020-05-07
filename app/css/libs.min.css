@@ -4166,7 +4166,7 @@ select
 
 .aside_left .nav
 {
-  margin: 80px 0;
+  margin: 80px 0 40vh 0;
   list-style: none;
 }
 
@@ -5258,60 +5258,23 @@ select
   height: 140px;
 }
 
-.social-link li a
+@media only screen and (max-width: 1199px)
 {
-  background-color: #ec1839;
-}
+  .aside_left
+  {
+    left: -270px;
+  }
 
-.contact .contact-info-item .icon .fa,
-.blog .blog-item-inner .blog-info .blog-tags a,
-.lightbox .lightbox-controls .prev-item .fa,
-.lightbox .lightbox-controls .next-item .fa,
-.portfolio .portfolio-item .portfolio-info .icon .fa,
-.portfolio .portfolio-filter button.active,
-.service .service-item .service-item-inner .icon .fa,
-.about .about-content .about-text h3 span,
-.aside_left .nav li a:hover,
-.aside_left .nav li a.active
-{
-  color: #ec1839;
-}
+  .main-content
+  {
+    padding-left: 0;
+  }
 
-.service .service-item .service-item-inner:hover .icon .fa
-{
-  color: #fff;
-}
-
-.blog .blog-item-inner .blog-img .blog-date,
-.service .service-item .service-item-inner:hover .icon,
-.about .about-content .timeline .circle-dot,
-.about .about-content .timeline .timeline-item:before,
-.about .about-content .skills .skill-item .progress .progress-in,
-.btn,
-.section .section-title h2:after,
-.section .section-title h2:before,
-.aside_left .nav-toggler span:after,
-.aside_left .nav-toggler span:before,
-.aside_left .nav-toggler span
-{
-  background-color: #ec1839;
-}
-
-.portfolio .portfolio-filter button.active
-{
-  border-color: #ec1839;
-}
-
-.logo a:after
-{
-  border-right: 4px solid #ec1839;
-  border-bottom: 4px solid #ec1839;
-}
-
-.logo a:before
-{
-  border-top: 4px solid #ec1839;
-  border-left: 4px solid #ec1839;
+  .about .about-content .personal-info .info-item p span
+  {
+    display: block;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 1080px)
@@ -5322,8 +5285,40 @@ select
 {
 }
 
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 991px)
 {
+  .blog .blog-item,
+  .portfolio .portfolio-item,
+  .service .service-item
+  {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 767px)
+{
+  
+  .contact .contact-form .col-6,
+  .blog .blog-item,
+  .service .service-item,
+  .about .about-content .experience,
+  .about .about-content .education,
+  .about .about-content .skills,
+  .about .about-content .personal-info
+  {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .portfolio .portfolio-filter button
+  {
+    margin-bottom: 8px;
+  }
 }
 
 @media only screen and (max-width: 667px)
@@ -5332,6 +5327,18 @@ select
 
 @media only screen and (max-width: 600px)
 {
+}
+
+@media only screen and (max-width: 575px)
+{
+  .contact .contact-info-item,
+  .portfolio .portfolio-item
+  {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 @media only screen and (max-width: 480px)

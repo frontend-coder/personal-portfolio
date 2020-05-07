@@ -57,6 +57,134 @@ function styles() {
 .pipe(gulp.dest('app/css'));
 };
 
+
+
+function pinkstyles() {
+	let sassFiles = [
+		'app/scss/pink.scss'
+	];
+	return gulp.src(sassFiles)
+		.pipe(plumber({
+			errorHandler: notify.onError(function (err) {
+				return {
+					title: 'Styles',
+					message: err.message
+				}
+			})
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(sass({ outputStyle: 'expanded' }))
+		.pipe(autoprefixer(['last 6 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+		.pipe(stripCssComments())
+		.pipe(cssbeautify({ indent: '  ', openbrace: 'separate-line', autosemicolon: true }))
+		.pipe(rename('pink.css'))
+		//.pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
+		.pipe(sourcemaps.write(''))
+		//.pipe(notify("Create file: <%= file.relative %>!"))
+		.pipe(gulp.dest('app/css'));
+};
+
+function bluestyles() {
+	let sassFiles = [
+		'app/scss/blue.scss'
+	];
+	return gulp.src(sassFiles)
+		.pipe(plumber({
+			errorHandler: notify.onError(function (err) {
+				return {
+					title: 'Styles',
+					message: err.message
+				}
+			})
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(sass({ outputStyle: 'expanded' }))
+		.pipe(autoprefixer(['last 6 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+		.pipe(stripCssComments())
+		.pipe(cssbeautify({ indent: '  ', openbrace: 'separate-line', autosemicolon: true }))
+		.pipe(rename('blue.css'))
+		//.pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
+		.pipe(sourcemaps.write(''))
+		//.pipe(notify("Create file: <%= file.relative %>!"))
+		.pipe(gulp.dest('app/css'));
+};
+
+function orangestyles() {
+	let sassFiles = [
+		'app/scss/orange.scss'
+	];
+	return gulp.src(sassFiles)
+		.pipe(plumber({
+			errorHandler: notify.onError(function (err) {
+				return {
+					title: 'Styles',
+					message: err.message
+				}
+			})
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(sass({ outputStyle: 'expanded' }))
+		.pipe(autoprefixer(['last 6 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+		.pipe(stripCssComments())
+		.pipe(cssbeautify({ indent: '  ', openbrace: 'separate-line', autosemicolon: true }))
+		.pipe(rename('orange.css'))
+		//.pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
+		.pipe(sourcemaps.write(''))
+		//.pipe(notify("Create file: <%= file.relative %>!"))
+		.pipe(gulp.dest('app/css'));
+};
+
+function yellowstyles() {
+	let sassFiles = [
+		'app/scss/yellow.scss'
+	];
+	return gulp.src(sassFiles)
+		.pipe(plumber({
+			errorHandler: notify.onError(function (err) {
+				return {
+					title: 'Styles',
+					message: err.message
+				}
+			})
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(sass({ outputStyle: 'expanded' }))
+		.pipe(autoprefixer(['last 6 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+		.pipe(stripCssComments())
+		.pipe(cssbeautify({ indent: '  ', openbrace: 'separate-line', autosemicolon: true }))
+		.pipe(rename('yellow.css'))
+		//.pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
+		.pipe(sourcemaps.write(''))
+		//.pipe(notify("Create file: <%= file.relative %>!"))
+		.pipe(gulp.dest('app/css'));
+};
+
+
+function greenstyles() {
+	let sassFiles = [
+		'app/scss/green.scss'
+	];
+	return gulp.src(sassFiles)
+		.pipe(plumber({
+			errorHandler: notify.onError(function (err) {
+				return {
+					title: 'Styles',
+					message: err.message
+				}
+			})
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(sass({ outputStyle: 'expanded' }))
+		.pipe(autoprefixer(['last 6 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+		.pipe(stripCssComments())
+		.pipe(cssbeautify({ indent: '  ', openbrace: 'separate-line', autosemicolon: true }))
+		.pipe(rename('green.css'))
+		//.pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
+		.pipe(sourcemaps.write(''))
+		//.pipe(notify("Create file: <%= file.relative %>!"))
+		.pipe(gulp.dest('app/css'));
+};
+
 function scripts() {
 	var jsFiles = [
 	'app/libs/plagins/jquery.min.js',
@@ -145,6 +273,13 @@ function moveimages() {
 	.pipe(filesize()).on('error', gulpUtil.log);
 }
 
+gulp.task('orangestyles', orangestyles);
+gulp.task('bluestyles', bluestyles);
+gulp.task('pinkstyles', pinkstyles);
+gulp.task('yellowstyles', yellowstyles);
+gulp.task('greenstyles', greenstyles);
+
+
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 gulp.task('serve', serve);
@@ -152,7 +287,7 @@ gulp.task('code', code);
 gulp.task('picture', picture);
 gulp.task('watch', watch);
 
-gulp.task('default', gulp.parallel(['styles','scripts', 'watch', 'serve']));
+gulp.task('default', gulp.parallel(['greenstyles', 'yellowstyles', 'orangestyles', 'bluestyles', 'pinkstyles', 'styles','scripts', 'watch', 'serve']));
 
 // gulp.task('compressimg', gulp.series(compressimg));
 gulp.task('cleanbuild', cleaner);
