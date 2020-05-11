@@ -4112,11 +4112,9 @@ select
   z-index: 10;
   border-right: 1px solid #e8dfec;
   padding: 30px 20px;
-}
-
-.main-content
-{
-  padding-left: 270px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .section
@@ -4124,6 +4122,61 @@ select
   background-color: #f2f2fc;
   min-height: 100vh;
   padding: 0 30px;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  opacity: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.section.active
+{
+  z-index: 2;
+  opacity: 1;
+  -webkit-animation: slideSection 1s ease;
+  animation: slideSection 1s ease;
+}
+
+.section.back-section
+{
+  z-index: 1;
+}
+
+@-webkit-keyframes slideSection
+{
+  0%
+  {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  100%
+  {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideSection
+{
+  0%
+  {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  100%
+  {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
 }
 
 .logo
@@ -4225,6 +4278,9 @@ select
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   display: none;
 }
 
@@ -4234,6 +4290,11 @@ select
   width: 16px;
   display: inline-block;
   position: relative;
+}
+
+.aside_left .nav-toggler.open span
+{
+  background-color: transparent;
 }
 
 .aside_left .nav-toggler span:after,
@@ -4250,6 +4311,22 @@ select
 .aside_left .nav-toggler span:after
 {
   top: 6px;
+}
+
+.aside_left .nav-toggler.open span:before
+{
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.aside_left .nav-toggler.open span:after
+{
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 .home
@@ -5258,6 +5335,150 @@ select
   height: 140px;
 }
 
+.style-switcher
+{
+  position: fixed;
+  top: 20px;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #d4d4e3;
+  border-right: none;
+  border-radius: 0 0 0 5px;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.style-switcher.open
+{
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.style-switcher .toggle-style-switcher
+{
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  background-color: #fff;
+  left: -46px;
+  top: 0;
+  border: 1px solid #d4d4e3;
+  border-right: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px 0 0 5px;
+}
+
+.style-switcher .toggle-style-switcher .fa
+{
+  font-size: 20px;
+  line-height: 43px;
+}
+
+.style-switcher h5
+{
+  font-size: 16px;
+  color: #302e4d;
+  margin-bottom: 5px;
+  margin-top: 0;
+  border-bottom: 1px solid #e8dfec;
+  padding-bottom: 5px;
+}
+
+.style-switcher ul
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.style-switcher ul li
+{
+  display: inline-block;
+}
+
+.style-switcher ul li a
+{
+  width: 30px;
+  height: 30px;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 2px;
+}
+
+body.dark .section
+{
+  background-color: #151515;
+}
+
+body.dark .contact .contact-form .form-item .form-control,
+body.dark .blog .blog-item-inner .blog-info,
+body.dark .service .service-item .service-item-inner,
+body.dark .about .about-content .timeline,
+body.dark .aside_left
+{
+  background-color: #222222;
+}
+
+body.dark .blog .blog-item-inner .blog-info .blog-title,
+body.dark .portfolio .portfolio-filter button,
+body.dark .service .service-item .service-item-inner h4,
+body.dark .about .about-content .timeline .timeline-title,
+body.dark .about .about-content h3.title,
+body.dark .about .about-content .skills .skill-item h5,
+body.dark .about .about-content .personal-info .info-item p,
+body.dark .about .about-content .about-text h3,
+body.dark .section-title h2,
+body.dark .home .intro h1,
+body.dark .aside_left .logo a,
+body.dark .aside_left .nav li a
+{
+  color: #fff;
+}
+
+body.dark .contact .contact-form .form-item .form-control,
+body.dark .contact .contact-info-item p,
+body.dark .blog .blog-item-inner .blog-info .blog-tags,
+body.dark .blog .blog-item-inner .blog-info .blog-descr,
+body.dark .service .service-item .service-item-inner p,
+body.dark .about .about-content .timeline .timeline-text,
+body.dark .about .about-content .timeline .timeline-date,
+body.dark .about .about-content .skills .skill-item .skill-percent,
+body.dark .about .about-content .personal-info .info-item p span,
+body.dark .about .about-content .about-text p,
+body.dark .home .intro p
+{
+  color: #e9e9e9;
+}
+
+body.dark .aside-left,
+body.dark .contact .contact-form .form-item .form-control,
+body.dark .blog .blog-item-inner,
+body.dark .portfolio .portfolio-item-inner,
+body.dark .service .service-item .service-item-inner,
+body.dark .about .about-content .timeline,
+body.dark .about .about-content .personal-info .info-item p,
+body.dark .aside_left .nav li a
+{
+  border-color: #393939;
+}
+
+body.dark .shadow-dark
+{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 @media only screen and (max-width: 1199px)
 {
   .aside_left
@@ -5265,12 +5486,36 @@ select
     left: -270px;
   }
 
-  .main-content
+  .aside_left.open
   {
-    padding-left: 0;
+    left: 0;
   }
 
-  .about .about-content .personal-info .info-item p span
+  .section,
+  .main-content
+  {
+    left: 0;
+  }
+
+  .section.open
+  {
+    left: 270px;
+  }
+
+  .aside_left .nav-toggler
+  {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 30px;
+  }
+
+  .aside_left .nav-toggler.open
+  {
+    left: 280px;
+  }
+
+  .aside_left .about .about-content .personal-info .info-item p span
   {
     display: block;
     margin-left: 0;

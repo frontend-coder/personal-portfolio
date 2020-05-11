@@ -30,7 +30,17 @@
 		}
 	</style>
 	<link rel="stylesheet" href="css/libs.min.css" />
-	<link rel="stylesheet" href="css/blue.css" />
+	<link rel="stylesheet" href="css/pink.css" />
+
+	<link rel="stylesheet" class="alternate-style" title="pink" href="css/pink.css" disabled>
+	<link rel="stylesheet" class="alternate-style" title="blue" href="css/blue.css" disabled>
+	<link rel="stylesheet" class="alternate-style" title="orange" href="css/orange.css" disabled>
+	<link rel="stylesheet" class="alternate-style" title="yellow" href="css/yellow.css" disabled>
+	<link rel="stylesheet" class="alternate-style" title="green" href="css/green.css" disabled>
+
+
+
+
 </head>
 <!-- это первый комментарий -->
 
@@ -47,12 +57,12 @@
 			</div>
 
 			<ul class="nav">
-				<li><a href="#" class="active"> <i class="fa fa-home"></i> Главная</a></li>
-				<li><a href="#"> <i class="fa fa-user"></i> О нас</a></li>
-				<li><a href="#"> <i class="fa fa-list"></i> Услуги</a></li>
-				<li><a href="#"> <i class="fa fa-briefcase"></i> Портофлио</a></li>
-				<li><a href="#"> <i class="fa fa-envelope"></i> Блог</a></li>
-				<li><a href="#"> <i class="fa fa-comments"></i> Контакты</a></li>
+				<li><a href="#home" class="active"> <i class="fa fa-home"></i> Главная</a></li>
+				<li><a href="#about"> <i class="fa fa-user"></i> О нас</a></li>
+				<li><a href="#services"> <i class="fa fa-list"></i> Услуги</a></li>
+				<li><a href="#portfolio"> <i class="fa fa-briefcase"></i> Портофлио</a></li>
+				<li><a href="#blog"> <i class="fa fa-envelope"></i> Блог</a></li>
+				<li><a href="#contact"> <i class="fa fa-comments"></i> Контакты</a></li>
 
 			</ul>
 			<div class="copyright_text">
@@ -62,7 +72,7 @@
 		</aside>
 
 		<div class="main-content">
-			<section class="home section">
+			<section class="home section active" id="home">
 				<div class="container">
 					<div class="intro">
 						<img class="shadow-dark" src="img/about_me.jpg"
@@ -79,7 +89,7 @@
 				</div>
 			</section>
 
-			<section class="about section">
+			<section class="about section" id="about">
 				<div class="container">
 					<div class="row">
 						<div class="section-title padd-15">
@@ -273,7 +283,7 @@
 			</section>
 
 
-			<section class="service section">
+			<section class="service section" id="services">
 				<div class="container">
 					<div class="row">
 						<div class="section-title padd-15">
@@ -344,7 +354,7 @@
 			</section>
 
 
-			<section class="portfolio section">
+			<section class="portfolio section" id="portfolio">
 				<div class="container">
 					<div class="row">
 						<div class="section-title padd-15">
@@ -438,7 +448,7 @@
 				</div>
 			</section>
 
-			<section class="blog section hedden">
+			<section class="blog section" id="blog">
 				<div class="container">
 					<div class="row">
 						<div class="section-title padd-15">
@@ -498,7 +508,7 @@
 				</div>
 			</section>
 
-			<section class="contact section">
+			<section class="contact section" id="contact">
 				<div class="container">
 					<div class="row">
 						<div class="section-title padd-15">
@@ -587,9 +597,6 @@
 					</div>
 				</div>
 			</section>
-
-
-
 		</div>
 	</div>
 
@@ -610,7 +617,112 @@
 			<div class="next-item" onclick="nextItem()"> <i class="fa fa-angle-right"></i> </div>
 		</div>
 	</div>
+
+	<div class="style-switcher">
+		<div class="toggle-style-switcher">
+			<i class="fa fa-cog fa-spin"></i>
+		</div>
+		<h5>Изменить оформление</h5>
+		<ul>
+			<li> <a href="javascript:void(0)" title="pink" style="background-color: #ec1839;"
+					onclick="setActiveStyle('pink')"></a> </li>
+			<li> <a href="javascript:void(0)" title="blue" style="background-color: #2196f3;"
+					onclick="setActiveStyle('blue')"></a> </li>
+			<li> <a href="javascript:void(0)" title="orange" style="background-color: #fa5b0f;"
+					onclick="setActiveStyle('orange')"></a> </li>
+			<li> <a href="javascript:void(0)" title="yellow" style="background-color: #ffb400;"
+					onclick="setActiveStyle('yellow')"></a> </li>
+			<li> <a href="javascript:void(0)" title="green" style="background-color: #72b626;"
+					onclick="setActiveStyle('green')"></a> </li>
+		</ul>
+		<h5>Изменить оформление</h5>
+		<label>
+			<input type="radio" class="body-skin" name="body-style" value="light" checked="true">
+			Светлая
+		</label>
+		<label>
+			<input type="radio" class="body-skin" name="body-style" value="dark">
+			Темная
+		</label>
+	</div>
+
+
 	<script src="js/scripts.min.js"></script>
+	<script>
+		const nav = document.querySelector(".nav");
+		const navList = nav.querySelectorAll("li");
+		const totalNavList = navList.length;
+		const allSection = document.querySelectorAll('.section');
+		const totalSection = allSection.length;
+
+		for (let i = 0; i < totalNavList; i++) {
+			const a = navList[i].querySelector("a");
+			a.addEventListener("click", function () {
+				for (let i = 0; i < totalSection; i++) {
+					allSection[i].classList.remove('back-section');
+				}
+
+
+				for (let j = 0; j < totalNavList; j++) {
+					if (navList[j].querySelector('a').classList.contains('active')) {
+						allSection[j].classList.add('back-section');
+					}
+					navList[j].querySelector('a').classList.remove('active');
+				}
+				this.classList.add('active');
+				showSection(this);
+			})
+		}
+
+		function showSection(e) {
+			for (let i = 0; i < totalSection; i++) {
+				allSection[i].classList.remove('active');
+			}
+			const target = e.getAttribute('href').split('#')[1];
+			document.querySelector('#' + target).classList.add('active');
+		}
+
+		const navTogglerBtn = document.querySelector('.nav-toggler');
+		const aside = document.querySelector('.aside_left');
+
+		navTogglerBtn.addEventListener('click', function () {
+			asideSectionTogglerBtn();
+		})
+
+		function asideSectionTogglerBtn() {
+			aside.classList.toggle('open');
+			navTogglerBtn.classList.toggle('open');
+			for (let i = 0; i < totalSection; i++) {
+				allSection[i].classList.toggle('open');
+			}
+		}
+
+		const links = document.querySelectorAll('.alternate-style');
+
+		function setActiveStyle(color) {
+			for (let i = 0; i < links.length; i++) {
+				if (color == links[i].getAttribute('title')) {
+					links[i].removeAttribute('disabled');
+				} else {
+					links[i].setAttribute('disabled', 'true');
+				}
+			}
+		}
+
+		const bodySkin = document.querySelectorAll('.body-skin');
+		for (let i = 0; i < bodySkin.length; i++) {
+			bodySkin[i].addEventListener("change", function () {
+				if (this.value === "dark") {
+					document.body.className = "dark";
+				} else {
+					document.body.className = 'light';
+				}
+			})
+		}
+		document.querySelector(".toggle-style-switcher").addEventListener("click", () => {
+			document.querySelector(".style-switcher").classList.toggle("open");
+		})
+	</script>
 </body>
 
 </html>

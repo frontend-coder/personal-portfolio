@@ -10,11 +10,29 @@
 		left: -270px;
 	}
 
-	.main-content {
-		padding-left: 0;
+	.aside_left.open {
+		left: 0;
 	}
 
-	.about .about-content .personal-info .info-item p span {
+	.section,
+	.main-content {
+		left: 0;
+	}
+
+	.section.open {
+		left: 270px;
+	}
+
+	.aside_left .nav-toggler {
+		display: flex;
+		left: 30px;
+	}
+
+	.aside_left .nav-toggler.open {
+		left: 280px;
+	}
+
+	.aside_left .about .about-content .personal-info .info-item p span {
 		display: block;
 		margin-left: 0;
 	}

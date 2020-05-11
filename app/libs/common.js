@@ -37,6 +37,18 @@ const lightboxCiunter = lightbox.querySelector('.caption-ciunter');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 const totalPortfolioItem = portfolioItems.length;
 
+
+function changeItem() {
+  const imgSrc = portfolioItems[itemIndex].querySelector('.portfolio-img img').getAttribute('src');
+  lightboxImg.src = imgSrc;
+  lightboxText.innerHTML = portfolioItems[itemIndex].querySelector('h4').innerHTML;
+  lightboxCiunter.innerHTML = `${itemIndex + 1} из ${totalPortfolioItem}`;
+}
+
+function toggleLightbox() {
+  lightbox.classList.toggle('open');
+}
+
 let itemIndex = 0;
 for (let i = 0; i < totalPortfolioItem; i++) {
   portfolioItems[i].addEventListener('click', () => {
@@ -46,9 +58,6 @@ for (let i = 0; i < totalPortfolioItem; i++) {
   });
 }
 
-function toggleLightbox() {
-  lightbox.classList.toggle('open');
-}
 
 function nextItem() {
   if (itemIndex === totalPortfolioItem - 1) {
@@ -67,14 +76,12 @@ function prevItem() {
   changeItem();
 }
 
-function changeItem() {
-  imgSrc = portfolioItems[itemIndex].querySelector('.portfolio-img img').getAttribute('src');
-  lightboxImg.src = imgSrc;
-  lightboxText.innerHTML = portfolioItems[itemIndex].querySelector('h4').innerHTML;
-  lightboxCiunter.innerHTML = `${itemIndex + 1} из ${totalPortfolioItem}`;
-}
+
 lightbox.addEventListener('click', (event) => {
   if (event.target === lightboxClose || event.target === lightbox) {
     toggleLightbox();
   }
+
+
+  // / end code
 });
