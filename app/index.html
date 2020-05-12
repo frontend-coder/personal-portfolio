@@ -38,11 +38,11 @@
 	<link rel="stylesheet" class="alternate-style" title="yellow" href="css/yellow.css" disabled>
 	<link rel="stylesheet" class="alternate-style" title="green" href="css/green.css" disabled>
 
-
-
-
 </head>
 <!-- это первый комментарий -->
+<div class="preloader-overlay">
+	<div class="loader"></div>
+</div>
 
 <body>
 
@@ -127,9 +127,9 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="buttons">
+										<div class="buttons padd-15">
 											<a class="btn" href="#"> Скачать прайс</a>
-											<a class="btn" href="#"> Нанять меня</a>
+											<a class="btn hire-me" data-section-index="1" href="#contact"> Нанять меня</a>
 										</div>
 									</div>
 								</div>
@@ -649,6 +649,43 @@
 
 	<script src="js/scripts.min.js"></script>
 	<script>
+		function updateNav(element) {
+			for (let i = 0; i < totalNavList; i++) {
+				navList[i].querySelector('a').classList.remove('active');
+				const target = element.getAttribute('href').split('#')[1];
+				if (target === navList[i].querySelector('a').getAttribute('href').split('#')[1]) {
+					navList[i].querySelector('a').classList.add('active');
+				}
+			}
+		}
+
+
+		function removeBackSectionClass() {
+			for (let i = 0; i < totalSection; i++) {
+				allSection[i].classList.remove('back-section');
+			}
+		}
+
+
+		document.querySelector('.hire-me').addEventListener('click', function () {
+			const sectionIndex = this.getAttribute('data-section-index');
+			showSection(this);
+			updateNav(this);
+		})
+
+		window.addEventListener('load', function () {
+			document.querySelector('.preloader-overlay').classList.add('.opacity-zero');
+			setTimeout(function () {
+				document.querySelector('.preloader-overlay').style.display = 'none';
+			}, 1000)
+		})
+
+
+		function addBackSectionClass(num) {
+			allSection[num].classList.add('back-section');
+
+		};
+
 		const nav = document.querySelector(".nav");
 		const navList = nav.querySelectorAll("li");
 		const totalNavList = navList.length;
@@ -662,15 +699,20 @@
 					allSection[i].classList.remove('back-section');
 				}
 
-
 				for (let j = 0; j < totalNavList; j++) {
 					if (navList[j].querySelector('a').classList.contains('active')) {
-						allSection[j].classList.add('back-section');
+						// allSection[j].classList.add('back-section');
+						addBackSectionClass(j);
 					}
 					navList[j].querySelector('a').classList.remove('active');
 				}
 				this.classList.add('active');
 				showSection(this);
+
+				if (window.innerWidth < 1200) {
+					asideSectionTogglerBtn();
+				}
+
 			})
 		}
 

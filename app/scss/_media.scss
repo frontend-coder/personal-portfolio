@@ -6,6 +6,9 @@
 @media only screen and (max-width : 1200px) {}
 
 @media only screen and (max-width : 1199px) {
+	.section .container {
+		padding-top: 70px;
+	}
 	.aside_left {
 		left: -270px;
 	}
