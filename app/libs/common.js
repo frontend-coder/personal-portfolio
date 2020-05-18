@@ -50,31 +50,13 @@ function toggleLightbox() {
 }
 
 let itemIndex = 0;
-for (let i = 0; i < totalPortfolioItem; i++) {
-  portfolioItems[i].addEventListener('click', () => {
-    itemIndex = i;
-    changeItem();
-    toggleLightbox();
-  });
-}
-
-
-function nextItem() {
-  if (itemIndex === totalPortfolioItem - 1) {
-    itemIndex = 0;
-  } else {
-    itemIndex++;
-  }
-  changeItem();
-}
-function prevItem() {
-  if (itemIndex === 0) {
-    itemIndex = totalPortfolioItem - 1;
-  } else {
-    itemIndex--;
-  }
-  changeItem();
-}
+// for (let i = 0; i < totalPortfolioItem; i++) {
+//   portfolioItems[i].addEventListener('click', () => {
+//     itemIndex = i;
+//     changeItem();
+//     toggleLightbox();
+//   });
+// }
 
 
 lightbox.addEventListener('click', (event) => {

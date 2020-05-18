@@ -4920,6 +4920,7 @@ select
   position: relative;
 }
 
+.portfolio .portfolio-item-inner:hover .portfolio-info h5,
 .portfolio .portfolio-item-inner:hover .portfolio-info h4
 {
   -webkit-transform: translateX(0px);
@@ -4950,6 +4951,7 @@ select
   transition: all .3s ease;
 }
 
+.portfolio .portfolio-item .portfolio-info h5,
 .portfolio .portfolio-item .portfolio-info h4
 {
   font-size: 18px;
@@ -4965,11 +4967,18 @@ select
   opacity: 0;
 }
 
+.portfolio .portfolio-item .portfolio-info h5
+{
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .portfolio .portfolio-item-inner:hover .portfolio-info
 {
   opacity: 1;
 }
 
+.portfolio .portfolio-item .portfolio-info .link,
 .portfolio .portfolio-item .portfolio-info .icon
 {
   height: 40px;
@@ -4989,6 +4998,12 @@ select
   opacity: 0;
 }
 
+.portfolio .portfolio-item .portfolio-info .link
+{
+  right: 60px;
+}
+
+.portfolio .portfolio-item-inner:hover .portfolio-info .link,
 .portfolio .portfolio-item-inner:hover .portfolio-info .icon
 {
   -webkit-transform: translateX(0px);
@@ -4997,6 +5012,7 @@ select
   opacity: 1;
 }
 
+.portfolio .portfolio-item .portfolio-info .link .fa,
 .portfolio .portfolio-item .portfolio-info .icon .fa
 {
   line-height: 40px;
@@ -5163,6 +5179,23 @@ select
   margin-bottom: 30px;
 }
 
+.blog .single-item
+{
+  margin-bottom: 30px;
+}
+
+.blog .single-item-inner
+{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #d4d4e3;
+  background-color: #fdf9ff;
+}
+
 .blog .blog-item-inner
 {
   -webkit-box-flex: 0;
@@ -5172,14 +5205,17 @@ select
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #d4d4e3;
+  background-color: #fdf9ff;
 }
 
+.blog .single-item-inner .blog-img,
 .blog .blog-item-inner .blog-img
 {
   position: relative;
   overflow: hidden;
 }
 
+.blog .single-item-inner .blog-img img,
 .blog .blog-item-inner .blog-img img
 {
   width: 100%;
@@ -5189,6 +5225,7 @@ select
   transition: all .5s ease;
 }
 
+.blog .single-item-inner:hover .blog-img img,
 .blog .blog-item-inner:hover .blog-img img
 {
   -webkit-transform: scale(1.1);
@@ -5196,12 +5233,14 @@ select
   transform: scale(1.1);
 }
 
+.blog .single-item-inner .blog-info,
 .blog .blog-item-inner .blog-info
 {
   padding: 30px 15px;
   background-color: #fdf9ff;
 }
 
+.blog .single-item-inner .blog-info .blog-title,
 .blog .blog-item-inner .blog-info .blog-title
 {
   font-size: 18px;
@@ -5211,6 +5250,7 @@ select
   margin-bottom: 10px;
 }
 
+.blog .single-item-inner .blog-info .blog-descr,
 .blog .blog-item-inner .blog-info .blog-descr
 {
   font-size: 16px;
@@ -5220,6 +5260,9 @@ select
   margin-bottom: 15px;
 }
 
+.blog .single-item-inner .blog-info .read_more,
+.blog .single-item-inner .blog-info .blog-tags,
+.blog .blog-item-inner .blog-info .read_more,
 .blog .blog-item-inner .blog-info .blog-tags
 {
   font-size: 14px;
@@ -5229,12 +5272,33 @@ select
   text-transform: capitalize;
 }
 
+.blog .single-item-inner .blog-info .single-descr p
+{
+  font-size: 16px;
+  line-height: 25px;
+  color: #504e70;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.blog .blog-item-inner .blog-info .read_more a,
 .blog .blog-item-inner .blog-info .blog-tags a
 {
   text-decoration: none;
   font-weight: 600;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
+.blog .blog-item-inner .blog-info .read_more a
+{
+  padding: 5px 0;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+}
+
+.blog .single-item-inner .blog-img .blog-date,
 .blog .blog-item-inner .blog-img .blog-date
 {
   position: absolute;
@@ -5492,6 +5556,8 @@ body.dark .section
   }
 }
 
+body.dark .blog .single-item-inner .blog-info,
+body.dark .blog .blog-item-inner,
 body.dark .contact .contact-form .form-item .form-control,
 body.dark .blog .blog-item-inner .blog-info,
 body.dark .service .service-item .service-item-inner,
@@ -5501,6 +5567,9 @@ body.dark .aside_left
   background-color: #222222;
 }
 
+body.dark .blog .single-item-inner .blog-info .blog-tags,
+body.dark .blog .single-item-inner .blog-info .single-descr p,
+body.dark .blog .single-item-inner .blog-info .blog-title,
 body.dark .blog .blog-item-inner .blog-info .blog-title,
 body.dark .portfolio .portfolio-filter button,
 body.dark .service .service-item .service-item-inner h4,

@@ -3,6 +3,7 @@
   background-color: #2196f3;
 }
 
+.blog .single-item-inner .blog-info .blog-tags a,
 .contact .contact-info-item .icon .fa,
 .blog .blog-item-inner .blog-info .blog-tags a,
 .lightbox .lightbox-controls .prev-item .fa,
@@ -12,6 +13,7 @@ body.dark .portfolio .portfolio-filter button.active,
 .portfolio .portfolio-filter button.active,
 .service .service-item .service-item-inner .icon .fa,
 .about .about-content .about-text h3 span,
+.blog .blog-item-inner .blog-info .read_more a,
 body.dark .aside_left .nav li a.active,
 body.dark .aside_left .nav li a:hover,
 .aside_left .nav li a:hover,
@@ -20,11 +22,19 @@ body.dark .aside_left .nav li a:hover,
   color: #2196f3;
 }
 
+.blog .blog-item-inner .blog-info .read_more a:hover
+{
+  color: #2196f3;
+  border-bottom: 1px solid #2196f3;
+}
+
 .service .service-item .service-item-inner:hover .icon .fa
 {
   color: #fff;
 }
 
+.blog .single-item-inner .blog-img .blog-date,
+.blog .single-item-inner .blog-img .blog-date,
 .blog .blog-item-inner .blog-img .blog-date,
 .service .service-item .service-item-inner:hover .icon,
 .about .about-content .timeline .circle-dot,
