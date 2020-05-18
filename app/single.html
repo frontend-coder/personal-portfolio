@@ -40,9 +40,9 @@
 
 </head>
 <!-- это первый комментарий -->
-<div class="preloader-overlay">
+<!-- <div class="preloader-overlay">
 	<div class="loader"></div>
-</div>
+</div> -->
 
 <body>
 
@@ -73,7 +73,7 @@
 
 		<div class="main-content">
 
-			<section class="blog section">
+			<section class="blog section active" id="blog">
 				<div class="container">
 					<div class="row">
 						<div class="single-item padd-15">
@@ -174,12 +174,12 @@
 		}
 
 
-		window.addEventListener('load', function () {
-			document.querySelector('.preloader-overlay').classList.add('.opacity-zero');
-			setTimeout(function () {
-				document.querySelector('.preloader-overlay').style.display = 'none';
-			}, 1000)
-		})
+		// window.addEventListener('load', function () {
+		// 	document.querySelector('.preloader-overlay').classList.add('.opacity-zero');
+		// 	setTimeout(function () {
+		// 		document.querySelector('.preloader-overlay').style.display = 'none';
+		// 	}, 1000)
+		// })
 
 
 		function addBackSectionClass(num) {

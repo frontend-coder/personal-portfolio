@@ -40,9 +40,9 @@
 
 </head>
 <!-- это первый комментарий -->
-<div class="preloader-overlay">
+<!-- <div class="preloader-overlay">
 	<div class="loader"></div>
-</div>
+</div> -->
 
 <body>
 
@@ -57,10 +57,10 @@
 			</div>
 
 			<ul class="nav">
-				<li><a href="/" class="active"> <i class="fa fa-home"></i> Главная</a></li>
+				<li><a href="/"> <i class="fa fa-home"></i> Главная</a></li>
 				<li><a href="/about.html"> <i class="fa fa-user"></i> О нас</a></li>
 				<li><a href="/services.html"> <i class="fa fa-list"></i> Услуги</a></li>
-				<li><a href="/portfolio.html"> <i class="fa fa-briefcase"></i> Портофлио</a></li>
+				<li><a href="/portfolio.html" class="active"> <i class="fa fa-briefcase"></i> Портофлио</a></li>
 				<li><a href="/category.html"> <i class="fa fa-envelope"></i> Новое на Блоге </a></li>
 				<li><a href="/contact.html"> <i class="fa fa-comments"></i> Контакты</a></li>
 
@@ -72,7 +72,7 @@
 		</aside>
 
 		<div class="main-content">
-			<section class="portfolio section">
+			<section class="portfolio section active " id="portfolioactivactivee">
 				<div class="container">
 					<div class="row">
 						<div class="section-title padd-15">
@@ -293,24 +293,53 @@
 	</div>
 
 
-	<script src="js/scripts.min.js"></script>
+	<!-- <script src="js/scripts.min.js"></script> -->
 	<script>
-		function updateNav(element) {
-			for (let i = 0; i < totalNavList; i++) {
-				navList[i].querySelector('a').classList.remove('active');
-				const target = element.getAttribute('href').split('#')[1];
-				if (target === navList[i].querySelector('a').getAttribute('href').split('#')[1]) {
-					navList[i].querySelector('a').classList.add('active');
+		const filterContainer = document.querySelector('.portfolio-filter');
+		const filterBtns = filterContainer.children;
+		const totalFilterBtn = filterBtns.length;
+		const portfolioItems = document.querySelectorAll('.portfolio-item');
+		const totalPortfolioItem = portfolioItems.length;
+
+		for (let i = 0; i < totalFilterBtn; i++) {
+			filterBtns[i].addEventListener('click', function () {
+				filterContainer.querySelector('.active').classList.remove('active');
+				this.classList.add('active');
+				const
+					filterValue = this.getAttribute('data-filter');
+				for (let k = 0; k < totalPortfolioItem; k++) {
+					if (filterValue === portfolioItems[k].getAttribute('data-category')) {
+						portfolioItems[k].classList.remove('hide');
+						portfolioItems[k].classList.add('show');
+					} else {
+						portfolioItems[k].classList.remove('show');
+						portfolioItems[k].classList.add('hide');
+					}
+					if (filterValue === 'all') {
+						portfolioItems[k].classList.remove('hide');
+						portfolioItems[k].classList.add('show');
+					}
 				}
-			}
+			});
 		}
 
 
-		function removeBackSectionClass() {
-			for (let i = 0; i < totalSection; i++) {
-				allSection[i].classList.remove('back-section');
-			}
-		}
+		// function updateNav(element) {
+		// 	for (let i = 0; i < totalNavList; i++) {
+		// 		navList[i].querySelector('a').classList.remove('active');
+		// 		const target = element.getAttribute('href').split('#')[1];
+		// 		if (target === navList[i].querySelector('a').getAttribute('href').split('#')[1]) {
+		// 			navList[i].querySelector('a').classList.add('active');
+		// 		}
+		// 	}
+		// }
+
+
+		// function removeBackSectionClass() {
+		// 	for (let i = 0; i < totalSection; i++) {
+		// 		allSection[i].classList.remove('back-section');
+		// 	}
+		// }
 
 
 		// document.querySelector('.hire-me').addEventListener('click', function () {
@@ -319,71 +348,71 @@
 		// 	updateNav(this);
 		// })
 
-		window.addEventListener('load', function () {
-			document.querySelector('.preloader-overlay').classList.add('.opacity-zero');
-			setTimeout(function () {
-				document.querySelector('.preloader-overlay').style.display = 'none';
-			}, 1000)
-		})
+		// window.addEventListener('load', function () {
+		// 	document.querySelector('.preloader-overlay').classList.add('.opacity-zero');
+		// 	setTimeout(function () {
+		// 		document.querySelector('.preloader-overlay').style.display = 'none';
+		// 	}, 1000)
+		// })
 
 
-		function addBackSectionClass(num) {
-			allSection[num].classList.add('back-section');
+		// function addBackSectionClass(num) {
+		// 	allSection[num].classList.add('back-section');
 
-		};
+		// };
 
-		const nav = document.querySelector(".nav");
-		const navList = nav.querySelectorAll("li");
-		const totalNavList = navList.length;
-		const allSection = document.querySelectorAll('.section');
-		const totalSection = allSection.length;
+		// const nav = document.querySelector(".nav");
+		// const navList = nav.querySelectorAll("li");
+		// const totalNavList = navList.length;
+		// const allSection = document.querySelectorAll('.section');
+		// const totalSection = allSection.length;
 
-		for (let i = 0; i < totalNavList; i++) {
-			const a = navList[i].querySelector("a");
-			a.addEventListener("click", function () {
-				for (let i = 0; i < totalSection; i++) {
-					allSection[i].classList.remove('back-section');
-				}
+		// for (let i = 0; i < totalNavList; i++) {
+		// 	const a = navList[i].querySelector("a");
+		// 	a.addEventListener("click", function () {
+		// 		for (let i = 0; i < totalSection; i++) {
+		// 			allSection[i].classList.remove('back-section');
+		// 		}
 
-				for (let j = 0; j < totalNavList; j++) {
-					if (navList[j].querySelector('a').classList.contains('active')) {
-						// allSection[j].classList.add('back-section');
-						addBackSectionClass(j);
-					}
-					navList[j].querySelector('a').classList.remove('active');
-				}
-				this.classList.add('active');
-				showSection(this);
+		// 		for (let j = 0; j < totalNavList; j++) {
+		// 			if (navList[j].querySelector('a').classList.contains('active')) {
+		// 				// allSection[j].classList.add('back-section');
+		// 				addBackSectionClass(j);
+		// 			}
+		// 			navList[j].querySelector('a').classList.remove('active');
+		// 		}
+		// 		this.classList.add('active');
+		// 		showSection(this);
 
-				if (window.innerWidth < 1200) {
-					asideSectionTogglerBtn();
-				}
+		// 		if (window.innerWidth < 1200) {
+		// 			asideSectionTogglerBtn();
+		// 		}
 
-			})
-		}
+		// 	})
+		// }
 
-		function showSection(e) {
-			for (let i = 0; i < totalSection; i++) {
-				allSection[i].classList.remove('active');
-			}
-			const target = e.getAttribute('href').split('#')[1];
-			document.querySelector('#' + target).classList.add('active');
-		}
+		// function showSection(e) {
+		// 	for (let i = 0; i < totalSection; i++) {
+		// 		allSection[i].classList.remove('active');
+		// 	}
+		// 	const target = e.getAttribute('href').split('#')[1];
+		// 	document.querySelector('#' + target).classList.add('active');
+		// }
 
-		const navTogglerBtn = document.querySelector('.nav-toggler');
-		const aside = document.querySelector('.aside_left');
+		// const navTogglerBtn = document.querySelector('.nav-toggler');
+		// const aside = document.querySelector('.aside_left');
 
-		navTogglerBtn.addEventListener('click', function () {
-			asideSectionTogglerBtn();
-		})
+		// navTogglerBtn.addEventListener('click', function () {
+		// 	asideSectionTogglerBtn();
+		// })
 
-		function asideSectionTogglerBtn() {
-			aside.classList.toggle('open');
-			navTogglerBtn.classList.toggle('open');
-			for (let i = 0; i < totalSection; i++) {
-				allSection[i].classList.toggle('open');
-			}
-		}
+		// function asideSectionTogglerBtn() {
+		// 	aside.classList.toggle('open');
+		// 	navTogglerBtn.classList.toggle('open');
+		// 	for (let i = 0; i < totalSection; i++) {
+		// 		allSection[i].classList.toggle('open');
+		// 	}
+		// }
 
 		const links = document.querySelectorAll('.alternate-style');
 
