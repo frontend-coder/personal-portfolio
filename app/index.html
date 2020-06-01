@@ -39,10 +39,6 @@
 	<link rel="stylesheet" class="alternate-style" title="green" href="css/green.css" disabled>
 
 </head>
-<!-- это первый комментарий -->
-<!-- <div class="preloader-overlay">
-	<div class="loader"></div>
-</div> -->
 
 <body>
 
@@ -61,12 +57,16 @@
 				<li><a href="/about.html"> <i class="fa fa-user"></i> О нас</a></li>
 				<li><a href="/services.html"> <i class="fa fa-list"></i> Услуги</a></li>
 				<li><a href="/portfolio.html"> <i class="fa fa-briefcase"></i> Портофлио</a></li>
-				<li><a href="/category.html"> <i class="fa fa-envelope"></i> Новое на Блоге </a></li>
+				<li><a href="/calculator.html"> <i class="fa fa-calculator"></i> Калькулятор </a></li>
+				<li><a href="/category.html"> <i class="fa fa-envelope"></i> Блог </a></li>
 				<li><a href="/contact.html"> <i class="fa fa-comments"></i> Контакты</a></li>
 
 			</ul>
 			<div class="copyright_text">
 				&copy; 2020 Frontendercode & Co
+				<ul>
+					<li><a href="/politiks.html"> Политика конфициальности </a> </li>
+				</ul>
 			</div>
 
 		</aside>
@@ -94,24 +94,6 @@
 		</div>
 	</div>
 
-
-
-	<!-- <div class="lightbox">
-		<div class="lightbox-content">
-			<div class="close-lightbpx">x</div>
-			<img class="lightbox-img" src="img/portfolio/1.jpg" alt="lightbox img" onclick="nextItem()">
-			<div class="lightbox-caption">
-				<div class="caption-text">web-design</div>
-				<div class="caption-ciunter">1 из 6</div>
-			</div>
-
-		</div>
-		<div class="lightbox-controls">
-			<div class="prev-item" onclick="prevItem()"> <i class="fa fa-angle-left"></i> </div>
-			<div class="next-item" onclick="nextItem()"> <i class="fa fa-angle-right"></i> </div>
-		</div>
-	</div> -->
-
 	<div class="style-switcher">
 		<div class="toggle-style-switcher">
 			<i class="fa fa-cog fa-spin"></i>
@@ -130,117 +112,52 @@
 					onclick="setActiveStyle('green')"></a> </li>
 		</ul>
 		<h5>Изменить оформление</h5>
-		<label>
-			<input type="radio" class="body-skin" name="body-style" value="light" checked="true">
-			Светлая
-		</label>
-		<label>
-			<input type="radio" class="body-skin" name="body-style" value="dark">
-			Темная
-		</label>
+
+		<input id="light-theme" type="radio" class="body-skin" name="body-style" value="light" checked="true">
+		<label for="light-theme" class="radio-label">светлая</label>
+		<input id="dark-theme" type="radio" class="body-skin" name="body-style" value="dark">
+		<label for="dark-theme" class="radio-label">темная</label>
+
 	</div>
 
 
 	<!-- <script src="js/scripts.min.js"></script> -->
 	<script>
-		// function updateNav(element) {
-		// 	for (let i = 0; i < totalNavList; i++) {
-		// 		navList[i].querySelector('a').classList.remove('active');
-		// 		const target = element.getAttribute('href').split('#')[1];
-		// 		if (target === navList[i].querySelector('a').getAttribute('href').split('#')[1]) {
-		// 			navList[i].querySelector('a').classList.add('active');
-		// 		}
-		// 	}
-		// }
+		const navTogglerBtn = document.querySelector('.nav-toggler');
+		const aside = document.querySelector('.aside_left');
 
+		navTogglerBtn.addEventListener('click', function () {
+			asideSectionTogglerBtn();
+		})
 
-		// function removeBackSectionClass() {
-		// 	for (let i = 0; i < totalSection; i++) {
-		// 		allSection[i].classList.remove('back-section');
-		// 	}
-		// }
-
-
-		// document.querySelector('.hire-me').addEventListener('click', function () {
-		// 	const sectionIndex = this.getAttribute('data-section-index');
-		// 	showSection(this);
-		// 	updateNav(this);
-		// })
-
-		// window.addEventListener('load', function () {
-		// 	document.querySelector('.preloader-overlay').classList.add('.opacity-zero');
-		// 	setTimeout(function () {
-		// 		document.querySelector('.preloader-overlay').style.display = 'none';
-		// 	}, 1000)
-		// })
-
-
-		// function addBackSectionClass(num) {
-		// 	allSection[num].classList.add('back-section');
-
-		// };
-
-		// const nav = document.querySelector(".nav");
-		// const navList = nav.querySelectorAll("li");
-		// const totalNavList = navList.length;
-		// const allSection = document.querySelectorAll('.section');
-		// const totalSection = allSection.length;
-
-		// for (let i = 0; i < totalNavList; i++) {
-		// 	const a = navList[i].querySelector("a");
-		// 	a.addEventListener("click", function () {
-		// 		for (let i = 0; i < totalSection; i++) {
-		// 			allSection[i].classList.remove('back-section');
-		// 		}
-
-		// 		for (let j = 0; j < totalNavList; j++) {
-		// 			if (navList[j].querySelector('a').classList.contains('active')) {
-		// 				// allSection[j].classList.add('back-section');
-		// 				addBackSectionClass(j);
-		// 			}
-		// 			navList[j].querySelector('a').classList.remove('active');
-		// 		}
-		// 		this.classList.add('active');
-		// 		showSection(this);
-
-		// 		if (window.innerWidth < 1200) {
-		// 			asideSectionTogglerBtn();
-		// 		}
-
-		// 	})
-		// }
-
-		// function showSection(e) {
-		// 	for (let i = 0; i < totalSection; i++) {
-		// 		allSection[i].classList.remove('active');
-		// 	}
-		// 	const target = e.getAttribute('href').split('#')[1];
-		// 	document.querySelector('#' + target).classList.add('active');
-		// }
-
-		// const navTogglerBtn = document.querySelector('.nav-toggler');
-		// const aside = document.querySelector('.aside_left');
-
-		// navTogglerBtn.addEventListener('click', function () {
-		// 	asideSectionTogglerBtn();
-		// })
-
-		// function asideSectionTogglerBtn() {
-		// 	aside.classList.toggle('open');
-		// 	navTogglerBtn.classList.toggle('open');
-		// 	for (let i = 0; i < totalSection; i++) {
-		// 		allSection[i].classList.toggle('open');
-		// 	}
-		// }
+		function asideSectionTogglerBtn() {
+			aside.classList.toggle('open');
+			navTogglerBtn.classList.toggle('open');
+		}
 
 		const links = document.querySelectorAll('.alternate-style');
 
-		function setActiveStyle(color) {
+		function funonload() {
+			color = localStorage.setItem('colorTheme', 'blue');
+		}
+		funonload();
+
+		window.addEventListener('storage', function (e) {
+			console.log('change');
+		})
+
+		function setActiveStyle(color = localStorage.setItem('colorTheme')) {
+
 			for (let i = 0; i < links.length; i++) {
 				if (color == links[i].getAttribute('title')) {
 					links[i].removeAttribute('disabled');
+					//		console.info(links[i].getAttribute('title'));
+					let colorTheme = links[i].getAttribute('title');
+					console.info(colorTheme);
+					localStorage.setItem('colorTheme', colorTheme);
 				} else {
 					links[i].setAttribute('disabled', 'true');
+
 				}
 			}
 		}
@@ -258,15 +175,6 @@
 		document.querySelector(".toggle-style-switcher").addEventListener("click", () => {
 			document.querySelector(".style-switcher").classList.toggle("open");
 		})
-
-
-
-
-
-		//	фильтр
-
-
-		// конец фильтра 
 	</script>
 </body>
 

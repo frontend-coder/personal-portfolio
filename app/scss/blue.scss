@@ -10,8 +10,9 @@
 .lightbox .lightbox-controls .prev-item .fa,
 .lightbox .lightbox-controls .next-item .fa,
 .portfolio .portfolio-item .portfolio-info .icon .fa,
-body.dark .portfolio .portfolio-filter button.active,
+.portfolio .portfolio-item .portfolio-info .link .fa,
 .portfolio .portfolio-filter button.active,
+body.dark .portfolio .portfolio-filter button.active,
 .service .service-item .service-item-inner .icon .fa,
 .about .about-content .about-text h3 span,
 .blog .blog-item-inner .blog-info .read_more a,
@@ -27,10 +28,12 @@ body.dark .aside_left .nav li a:hover,
   border-bottom: 1px solid #2196f3;
 }
 
+.service .service-item .service-item-inner:hover .link .fa,
 .service .service-item .service-item-inner:hover .icon .fa {
   color: #fff;
 }
 
+.contact-form .success,
 .blog .single-item-inner .blog-img .blog-date,
 .blog .single-item-inner .blog-img .blog-date,
 .blog .blog-item-inner .blog-img .blog-date,
@@ -60,4 +63,31 @@ body.dark .portfolio .portfolio-filter button.active,
 .logo a:before {
   border-top: 4px solid #2196f3;
   border-left: 4px solid #2196f3;
+}
+
+.style-switcher input[type='radio']+.radio-label:before,
+.mobile_sec input[type='checkbox']+.radio-label:before,
+.radio input[type='radio']+.radio-label:before {
+  border: 1px solid #2196f3;
+}
+
+.style-switcher input[type='radio']:checked+.radio-label:before,
+.mobile_sec input[type='checkbox']:checked+.radio-label:before,
+.radio input[type='radio']:checked+.radio-label:before {
+  background-color: #2196f3;
+}
+
+.price-form_item input[type='number'] {
+  border: 1px solid #2196f3;
+}
+
+.price-form_item input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  border-left: 1px solid #2196f3;
+}
+
+.style-switcher input[type='radio']:focus+.radio-label:before,
+.mobile_sec input[type='checkbox']:focus+.radio-label:before,
+.radio input[type='radio']:focus+.radio-label:before {
+  border-color: #2196f3;
 }

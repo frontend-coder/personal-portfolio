@@ -1,4 +1,14 @@
 $(document).ready(() => {
+  // $('form').submit(function () { // Change
+  //   const th = $(this);
+  //   $.ajax({
+  //     type: 'POST',
+  //     url: 'send.php', // Change
+  //     data: th.serialize(),
+  //   });
+  //   return false;
+  // });
+
   // Ajax push mesege http://api.jquery.com/jquery.ajax/
   $('form').submit(function () {
     const th = $(this);
@@ -7,10 +17,10 @@ $(document).ready(() => {
       url: 'mail.php', // Change
       data: th.serialize(),
     }).done(() => {
-      $('.forms-calldecor .success').addClass('active');
+      $('.contact-form .success').addClass('active');
       setTimeout(() => {
         // Done Functions
-        $('.forms-calldecor .success').removeClass('active');
+        $('.contact-form .success').removeClass('active');
         th.trigger('reset');
         $.magnificPopup.close();
       }, 3000);

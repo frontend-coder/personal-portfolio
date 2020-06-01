@@ -39,10 +39,6 @@
 	<link rel="stylesheet" class="alternate-style" title="green" href="css/green.css" disabled>
 
 </head>
-<!-- это первый комментарий -->
-<!-- <div class="preloader-overlay">
-	<div class="loader"></div>
-</div> -->
 
 <body>
 
@@ -50,7 +46,7 @@
 		<aside class="aside_left">
 
 			<div class="logo">
-				<a href="#">Portfolio</a>
+				<a href="/">Portfolio</a>
 			</div>
 			<div class="nav-toggler">
 				<span></span>
@@ -61,12 +57,16 @@
 				<li><a href="/about.html" class="active"> <i class="fa fa-user"></i> О нас</a></li>
 				<li><a href="/services.html"> <i class="fa fa-list"></i> Услуги</a></li>
 				<li><a href="/portfolio.html"> <i class="fa fa-briefcase"></i> Портофлио</a></li>
-				<li><a href="/catgory.html"> <i class="fa fa-envelope"></i> Новое на Блоге </a></li>
+				<li><a href="/calculator.html"> <i class="fa fa-calculator"></i> Калькулятор </a></li>
+				<li><a href="/catgory.html"> <i class="fa fa-envelope"></i>Блог </a></li>
 				<li><a href="/contact.html"> <i class="fa fa-comments"></i> Контакты</a></li>
 
 			</ul>
 			<div class="copyright_text">
 				&copy; 2020 Frontendercode & Co
+				<ul>
+					<li><a href="/politiks.html"> Политика конфициальности </a> </li>
+				</ul>
 			</div>
 
 		</aside>
@@ -89,7 +89,6 @@
 										популярной CMS WordPress под ключ. Если необходимо разработать проект сервиса под запросы вашего
 										бизнеса, отрисовать макет для сайта с нуля, это сможет сделать дизайнер. С ним я сотрубличаю в
 										течении крайних 3 лет.
-
 									</p>
 								</div>
 							</div>
@@ -100,27 +99,26 @@
 											<p> Рабочее время в месяц, ч.: <span>270</span></p>
 										</div>
 										<div class="info-item padd-15">
-											<p> Одновременно работаю над: <span>1 проектом.</span></p>
+											<p> Одновременая работа: <span>1 пр.</span></p>
 										</div>
 
 										<div class="info-item padd-15">
-											<p> Доступен во время работы: <span>09 - 19</span></p>
+											<p> Доступен: <span>09 - 19</span></p>
 										</div>
 
 										<div class="info-item padd-15">
-											<p> Рабочие дни: <span>понедельник - суббота</span></p>
+											<p> Рабочие дни: <span>пон. - суб.</span></p>
 										</div>
 									</div>
 									<div class="row">
 										<div class="buttons padd-15">
 											<a class="btn" href="#"> Скачать прайс</a>
-											<a href="#" class="btn hire-me"> Нанять меня</a>
+											<a href="/contact.html" class="btn hire-me"> Нанять меня</a>
 										</div>
 									</div>
 								</div>
 								<div class="skills padd-15">
 									<div class="row">
-
 
 										<div class="skill-item padd-15">
 											<h5>HTML & CSS</h5>
@@ -308,12 +306,9 @@
 													</p>
 												</div>
 
-
 											</div>
 										</div>
 									</div>
-
-
 								</div>
 							</div>
 						</div>
@@ -321,13 +316,8 @@
 				</div>
 			</section>
 
-
-
 		</div>
 	</div>
-
-
-
 
 	<div class="style-switcher">
 		<div class="toggle-style-switcher">
@@ -347,107 +337,25 @@
 					onclick="setActiveStyle('green')"></a> </li>
 		</ul>
 		<h5>Изменить оформление</h5>
-		<label>
-			<input type="radio" class="body-skin" name="body-style" value="light" checked="true">
-			Светлая
-		</label>
-		<label>
-			<input type="radio" class="body-skin" name="body-style" value="dark">
-			Темная
-		</label>
+		<input id="light-theme" type="radio" class="body-skin" name="body-style" value="light" checked="true">
+		<label for="light-theme" class="radio-label">светлая</label>
+		<input id="dark-theme" type="radio" class="body-skin" name="body-style" value="dark">
+		<label for="dark-theme" class="radio-label">темная</label>
 	</div>
 
 
 	<script>
-		// function updateNav(element) {
-		// 	for (let i = 0; i < totalNavList; i++) {
-		// 		navList[i].querySelector('a').classList.remove('active');
-		// 		const target = element.getAttribute('href').split('#')[1];
-		// 		if (target === navList[i].querySelector('a').getAttribute('href').split('#')[1]) {
-		// 			navList[i].querySelector('a').classList.add('active');
-		// 		}
-		// 	}
-		// }
+		const navTogglerBtn = document.querySelector('.nav-toggler');
+		const aside = document.querySelector('.aside_left');
 
+		navTogglerBtn.addEventListener('click', function () {
+			asideSectionTogglerBtn();
+		})
 
-		// function removeBackSectionClass() {
-		// 	for (let i = 0; i < totalSection; i++) {
-		// 		allSection[i].classList.remove('back-section');
-		// 	}
-		// }
-
-
-		// document.querySelector('.hire-me').addEventListener('click', function () {
-		// 	const sectionIndex = this.getAttribute('data-section-index');
-		// 	showSection(this);
-		// 	updateNav(this);
-		// })
-
-		// window.addEventListener('load', function () {
-		// 	document.querySelector('.preloader-overlay').classList.add('.opacity-zero');
-		// 	setTimeout(function () {
-		// 		document.querySelector('.preloader-overlay').style.display = 'none';
-		// 	}, 1000)
-		// })
-
-
-		// function addBackSectionClass(num) {
-		// 	allSection[num].classList.add('back-section');
-
-		// };
-
-		// const nav = document.querySelector(".nav");
-		// const navList = nav.querySelectorAll("li");
-		// const totalNavList = navList.length;
-		// const allSection = document.querySelectorAll('.section');
-		// const totalSection = allSection.length;
-
-		// for (let i = 0; i < totalNavList; i++) {
-		// 	const a = navList[i].querySelector("a");
-		// 	a.addEventListener("click", function () {
-		// 		for (let i = 0; i < totalSection; i++) {
-		// 			allSection[i].classList.remove('back-section');
-		// 		}
-
-		// 		for (let j = 0; j < totalNavList; j++) {
-		// 			if (navList[j].querySelector('a').classList.contains('active')) {
-		// 				// allSection[j].classList.add('back-section');
-		// 				addBackSectionClass(j);
-		// 			}
-		// 			navList[j].querySelector('a').classList.remove('active');
-		// 		}
-		// 		this.classList.add('active');
-		// 		showSection(this);
-
-		// 		if (window.innerWidth < 1200) {
-		// 			asideSectionTogglerBtn();
-		// 		}
-
-		// 	})
-		// }
-
-		// function showSection(e) {
-		// 	for (let i = 0; i < totalSection; i++) {
-		// 		allSection[i].classList.remove('active');
-		// 	}
-		// 	const target = e.getAttribute('href').split('#')[1];
-		// 	document.querySelector('#' + target).classList.add('active');
-		// }
-
-		// const navTogglerBtn = document.querySelector('.nav-toggler');
-		// const aside = document.querySelector('.aside_left');
-
-		// navTogglerBtn.addEventListener('click', function () {
-		// 	asideSectionTogglerBtn();
-		// })
-
-		// function asideSectionTogglerBtn() {
-		// 	aside.classList.toggle('open');
-		// 	navTogglerBtn.classList.toggle('open');
-		// 	for (let i = 0; i < totalSection; i++) {
-		// 		allSection[i].classList.toggle('open');
-		// 	}
-		// }
+		function asideSectionTogglerBtn() {
+			aside.classList.toggle('open');
+			navTogglerBtn.classList.toggle('open');
+		}
 
 		const links = document.querySelectorAll('.alternate-style');
 
@@ -474,15 +382,6 @@
 		document.querySelector(".toggle-style-switcher").addEventListener("click", () => {
 			document.querySelector(".style-switcher").classList.toggle("open");
 		})
-
-
-
-
-
-		//	фильтр
-
-
-		// конец фильтра 
 	</script>
 </body>
 

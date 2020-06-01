@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- <base href="/"> -->
+	<title>Калькулятор услуг для заказчиков: Василенко Олег</title>
+	<meta name="description"
+		content="Олег Василенко выполнит создание веб-сайта под ключ с нуля ориентируясь на интересы бизнеса заказчика" />
+	<meta name="keywords" content="создать сайт с нуля, верстаю быстрые шаблоны">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="олег василенко">
+	<meta name="copyright"
+		content="все права на сайт и размещенные материалы в рамках данного проекта принадлежат олегу василенко">
+	<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" />
+	<!-- 3 нижние строки chrome, firefox os and opera; windows phone; ios safari    -->
+	<meta name="theme-color" content="#000">
+	<meta name="msapplication-navbutton-color" content="#000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<style>
+		html {
+			background-color: #fff;
+		}
+
+		body {
+			opacity: 0;
+			overflow-x: hidden;
+		}
+	</style>
+	<link rel="stylesheet" href="css/libs.min.css" />
+	<link rel="stylesheet" href="css/pink.css" />
+
+	<link rel="stylesheet" class="alternate-style" title="pink" href="css/pink.css" disabled>
+	<link rel="stylesheet" class="alternate-style" title="blue" href="css/blue.css" disabled>
+	<link rel="stylesheet" class="alternate-style" title="orange" href="css/orange.css" disabled>
+	<link rel="stylesheet" class="alternate-style" title="yellow" href="css/yellow.css" disabled>
+	<link rel="stylesheet" class="alternate-style" title="green" href="css/green.css" disabled>
+
+</head>
+
+<body>
+
+	<div class="main-container">
+		<aside class="aside_left">
+
+			<div class="logo">
+				<a href="/">Portfolio</a>
+			</div>
+			<div class="nav-toggler">
+				<span></span>
+			</div>
+
+			<ul class="nav">
+				<li><a href="/"> <i class="fa fa-home"></i> Главная</a></li>
+				<li><a href="/about.html"> <i class="fa fa-user"></i> О нас</a></li>
+				<li><a href="/services.html"> <i class="fa fa-list"></i> Услуги</a></li>
+				<li><a href="/portfolio.html"> <i class="fa fa-briefcase"></i> Портофлио</a></li>
+				<li><a href="/calculator.html" class="active"> <i class="fa fa-calculator"></i> Калькулятор </a></li>
+				<li><a href="/category.html"> <i class="fa fa-envelope"></i> Блог </a></li>
+				<li><a href="/contact.html"> <i class="fa fa-comments"></i> Контакты</a></li>
+
+			</ul>
+			<div class="copyright_text">
+				&copy; 2020 Frontendercode & Co
+				<ul>
+					<li><a href="/politiks.html"> Политика конфициальности </a> </li>
+				</ul>
+			</div>
+
+		</aside>
+
+		<div class="main-content">
+			<section class="service section active " id="service">
+				<div class="container">
+					<div class="row">
+						<div class="section-title padd-15">
+							<h2>Калькулятор услуг </h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="calculate__contents">
+							<form class="price-form contact-form" id="price-form">
+								<input type="hidden" name="Project name" value="https://frontend-coder.github.io/">
+								<input type="hidden" name="Admin email" value="frontendercode@gmail.com">
+								<input type="hidden" name="Form subject" value="Результаты расчета стоимости работ">
+								<input type="hidden" name="Placement" value="форма размещена на странице Калькулятор">
+								<input type="hidden" id="cost-rubl" name="cost-progect-inruble" value="">
+								<input type="hidden" id="cost-grivn" name="cost-progect-ingrivna" value="">
+								<input type="hidden" id="cost-bel-rubl" name="cost-progect-bel-ruble" value="">
+
+								<div class="success">Ваше сообщение уже получили. Мы выйдем на связь через 20 минут.
+								</div>
+
+								<div class="price-form_item">
+									<h5 class="title_calcul">Что верстаем</h5>
+									<div id="kind-site" class="radio-group">
+										<div class="radio">
+											<input id="radio-1" name="dosite" value="sitevisitka" type="radio" checked>
+											<label for="radio-1" class="radio-label">Сайт-визитка</label>
+										</div>
+										<div class="radio">
+											<input id="radio-2" name="dosite" value="blog" type="radio">
+											<label for="radio-2" class="radio-label">Блоги</label>
+										</div>
+										<div class="radio">
+											<input id="radio-3" name="dosite" value="landing" type="radio">
+											<label for="radio-3" class="radio-label">Лендинги</label>
+										</div>
+										<div class="radio">
+											<input id="radio-31" name="dosite" value="landingplusblog" type="radio">
+											<label for="radio-31" class="radio-label">Лендинги + Блог</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="price-form_item">
+									<h5 class="title_calcul">Количество страниц</h5>
+									<div class="col_page_wrap" data-name="site">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" name="pages-unique">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Количество уникальных страниц</h5>
+											<div class="price_minicalcul"> <span class="price_number_unic"></span> рублей/страница</div>
+										</div>
+									</div>
+									<div class="col_page_wrap" data-name="site">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" name="pages-general">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Количество типовых страниц</h5>
+											<div class="price_minicalcul"> <span class="price_number_general"></span> рублей/страница</div>
+										</div>
+									</div>
+									<div class="col_page_wrap" data-name="blog">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" name="pages-unique-blog">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Количество уникальных страниц</h5>
+											<div class="price_minicalcul"> <span class="price_number_unic"></span> рублей/страница</div>
+										</div>
+									</div>
+									<div class="col_page_wrap" data-name="blog">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" name="pages-general-blog">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Количество типовых страниц</h5>
+											<div class="price_minicalcul"> <span class="price_number_general"></span> рублей/страница</div>
+										</div>
+									</div>
+									<div class="col_page_wrap" data-name="landingplusblog">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" name="lpb-section">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Количество типовых секций</h5>
+											<div class="price_minicalcul"> <span class="price_number"></span> рублей/секция</div>
+										</div>
+									</div>
+									<div class="col_page_wrap" data-name="landingplusblog">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" name="lpb-unique">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Количество уникальных страниц</h5>
+											<div class="price_minicalcul"> <span class="price_number_unic"></span> рублей/страница</div>
+										</div>
+									</div>
+									<div class="col_page_wrap" data-name="landingplusblog">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" name="lpb-general">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Количество типовых страниц</h5>
+											<div class="price_minicalcul"> <span class="price_number_general"></span> рублей/страница</div>
+										</div>
+									</div>
+									<div class="col_page_wrap" data-name="landing">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" name="pages-section">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Количество типовых секций</h5>
+											<div class="price_minicalcul"> <span class="price_number"></span> рублей/секция</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="price-form_item">
+									<div class="mobile_sec mobile_ad">
+
+										<input id="mobile_adapt" type="checkbox" class="checkbox" name="mobile" checked>
+										<label for="mobile_adapt" class="radio-label">Мобильная адаптивность:</label>
+									</div>
+									<div id="mobile-points" class="radio-group">
+										<input class="hidden" id="radio-14" name="mobilepoint" value="0" type="radio">
+										<div class="radio" data-name="mobile">
+											<input id="radio-4" name="mobilepoint" value="5" type="radio" checked>
+											<label for="radio-4" class="radio-label">пять точек излома <span class="price_mobile_output">
+													<span class="price_mobile_output_five">
+													</span>% от базовой стоимости </span> </label>
+										</div>
+
+										<div class="radio" data-name="mobile">
+											<input id="radio-5" name="mobilepoint" value="7" type="radio">
+											<label for="radio-5" class="radio-label">семь точек излома
+												<span class="price_mobile_output"> <span class="price_mobile_output_seven">
+													</span>% от базовой стоимости </span>
+											</label>
+										</div>
+
+										<div class="radio" data-name="mobile">
+											<input id="radio-6" name="mobilepoint" value="9" type="radio">
+											<label for="radio-6" class="radio-label">девять точек излома
+												<span class="price_mobile_output"> <span class="price_mobile_output_nine">
+													</span>% от базовой стоимости </span>
+											</label>
+										</div>
+										<div class="radio" data-name="mobile">
+											<input id="radio-7" name="mobilepoint" value="10" type="radio">
+											<label for="radio-7" class="radio-label">инд. количество точек излома
+												<span class="price_mobile_output"> <span class="price_mobile_output_more">
+													</span>% от базовой стоимости </span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="price-form_item">
+									<h5 class="title_calcul">Дополнительный функционал</h5>
+									<div class="col_page_wrap">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" value="0" name="carousel">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Карусель c контентом</h5>
+
+											<span class="price_mobile_output">
+												<span class="price_courusel_out">
+												</span> руб/единица
+											</span>
+										</div>
+									</div>
+
+									<div class="col_page_wrap">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" value="0" name="modals">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Всплывающая форма обратной связи</h5>
+											<span class="price_mobile_output">
+												<span class="price_modal_foc">
+												</span> руб/единица
+											</span>
+										</div>
+									</div>
+
+									<div class="col_page_wrap">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" value="0" name="calculate">
+										</div>
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Калькулятор услуг</h5>
+											<span class="price_mobile_output">
+												<span class="price_calculate_out">
+												</span> руб/единица
+											</span>
+										</div>
+									</div>
+
+									<div class="col_page_wrap">
+										<div class="col_page_item">
+											<input min="0" type="number" class="input_short" placeholder="0" value="0" name="block-portfolio">
+										</div>
+
+										<div class="col_page_item">
+											<h5 class="title_minicalcul">Портфолио с всплывающим окном</h5>
+											<span class="price_mobile_output">
+												<span class="price_portfolio_out">
+												</span> руб/единица
+											</span>
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="price-form_item">
+									<h5 class="title_calcul">Дополнительно</h5>
+									<div class="dop_option">
+
+										<div class="mobile_sec ">
+											<input id="pixelperfect" type="checkbox" class="checkbox" name="PixelPerfect">
+											<label for="pixelperfect" class="radio-label">PixelPerfect
+												<span class="price_mobile_output">
+													<span class="price_pexelperfect"></span> % от стоимости
+												</span>
+											</label>
+										</div>
+
+										<div class="mobile_sec">
+											<input id="retinaready" type="checkbox" class="checkbox" name="RetinaReady">
+											<label for="retinaready" class="radio-label">Retina Ready
+												<span class="price_mobile_output">
+													<span class="price_retina"></span> % от стоимости
+												</span>
+											</label>
+										</div>
+
+										<div class="mobile_sec">
+											<input id="animation_blocks" type="checkbox" class="checkbox" name="AnimationBlocks">
+											<label for="animation_blocks" class="radio-label">Анимация
+												<span class="price_mobile_output">
+													<span class="price_animation"></span> % от стоимости
+												</span>
+											</label>
+										</div>
+
+										<div class="mobile_sec">
+											<input id="googlepagespeed" type="checkbox" class="checkbox" name="GooglePageSpeed">
+											<label for="googlepagespeed" class="radio-label">Google Page Speed
+												<span class="price_mobile_output">
+													<span class="price_gps"></span> % от стоимости
+												</span>
+											</label>
+										</div>
+
+										<div class="mobile_sec">
+											<input id="speedwork" type="checkbox" class="checkbox" name="SpeedWork">
+											<label for="speedwork" class="radio-label">Срочная работа
+												<span class="price_mobile_output">
+													<span class="price_speed"></span> % от стоимости
+												</span>
+											</label>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="price-form_item">
+									<h5 class="title_calcul">Посадка верстки</h5>
+
+									<div id="posadka" class="radio-group">
+										<div class="radio">
+											<input id="radio-8" name="cms" value="onlylayout" type="radio" checked>
+											<label for="radio-8" class="radio-label">без посадки</label>
+										</div>
+										<div class="radio">
+											<input id="radio-9" name="cms" value="WordPress" type="radio">
+											<label for="radio-9" class="radio-label">WordPress</label>
+										</div>
+
+										<div class="radio">
+											<input id="radio-10" name="cms" value="October" type="radio" disabled>
+											<label for="radio-10" class="radio-label">October</label>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="price-form_item">
+									<h5 class="title_calcul final_cost">Финальная стоимость проекта: </h5>
+									<div id="cost_final"> <span>5 000</span> рублей</div>
+									<div id="cost_final_griv"> <span>1 940</span> гривень</div>
+									<div id="cost_final_belrub"> <span>170</span> бел.рублей</div>
+
+									<div class="price_name">
+										<input id="your_name" type="text" placeholder="Введите ваше имя" name="name">
+									</div>
+									<div class="price_name">
+										<input id="your_phone" type="text" placeholder="Введите ваш Е-mail" name="email">
+									</div>
+
+									<div class="form-group">
+										<input id="checkbox" name="checkbox" type="checkbox" class="form-control-check" checked disabled>
+										<label for="checkbox" class="css-label">Я даю согласие на обработку своих персональных данных и
+											ознакомлен с <a href="/politiks.html">политикой конфициальности</a>
+										</label>
+									</div>
+
+
+									<button class="btn btn_calc">Отправить</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+
+		</div>
+	</div>
+
+
+	<div class="style-switcher">
+		<div class="toggle-style-switcher">
+			<i class="fa fa-cog fa-spin"></i>
+		</div>
+		<h5>Изменить оформление</h5>
+		<ul>
+			<li> <a href="javascript:void(0)" title="pink" style="background-color: #ec1839;"
+					onclick="setActiveStyle('pink')"></a> </li>
+			<li> <a href="javascript:void(0)" title="blue" style="background-color: #2196f3;"
+					onclick="setActiveStyle('blue')"></a> </li>
+			<li> <a href="javascript:void(0)" title="orange" style="background-color: #fa5b0f;"
+					onclick="setActiveStyle('orange')"></a> </li>
+			<li> <a href="javascript:void(0)" title="yellow" style="background-color: #ffb400;"
+					onclick="setActiveStyle('yellow')"></a> </li>
+			<li> <a href="javascript:void(0)" title="green" style="background-color: #72b626;"
+					onclick="setActiveStyle('green')"></a> </li>
+		</ul>
+		<h5>Изменить оформление</h5>
+		<input id="light-theme" type="radio" class="body-skin" name="body-style" value="light" checked="true">
+		<label for="light-theme" class="radio-label">светлая</label>
+		<input id="dark-theme" type="radio" class="body-skin" name="body-style" value="dark">
+		<label for="dark-theme" class="radio-label">темная</label>
+	</div>
+	<script src="js/scripts.min.js"></script>
+	<script>
+		const navTogglerBtn = document.querySelector('.nav-toggler');
+		const aside = document.querySelector('.aside_left');
+
+		navTogglerBtn.addEventListener('click', function () {
+			asideSectionTogglerBtn();
+		})
+
+		function asideSectionTogglerBtn() {
+			aside.classList.toggle('open');
+			navTogglerBtn.classList.toggle('open');
+		}
+
+		const links = document.querySelectorAll('.alternate-style');
+
+		function setActiveStyle(color) {
+			for (let i = 0; i < links.length; i++) {
+				if (color == links[i].getAttribute('title')) {
+					links[i].removeAttribute('disabled');
+				} else {
+					links[i].setAttribute('disabled', 'true');
+				}
+			}
+		}
+
+		const bodySkin = document.querySelectorAll('.body-skin');
+		for (let i = 0; i < bodySkin.length; i++) {
+			bodySkin[i].addEventListener("change", function () {
+				if (this.value === "dark") {
+					document.body.className = "dark";
+				} else {
+					document.body.className = 'light';
+				}
+			})
+		}
+		document.querySelector(".toggle-style-switcher").addEventListener("click", () => {
+			document.querySelector(".style-switcher").classList.toggle("open");
+		})
+	</script>
+
+
+	<script>
+		const formCalcul = $('#price-form');
+		let formData = formCalcul.serializeJSON();
+		showHideBlocks();
+		// цена разработки типовой секции
+		const typicalSectionPrice = 2000;
+		const uniquePagePrice = 5000;
+		const generalPagePrice = 2500;
+
+		const oneCarouselPrice = 1500;
+		const oneModalsPrice = 900;
+		const oneCalculatePrice = 8500;
+		const onePortfolioPrice = 1800;
+
+		const wordpressUniquePrice = 1500;
+		const wordpressGeneralPrice = 1000;
+		const wordpressSectionPrice = 300;
+		const wordpressCalculatePrice = 4000;
+		const wordpressPortfolioPrice = 500;
+
+		const costMobileOutFive = 30;
+		const costMobileOutSeven = 50;
+		const costMobileOutNine = 70;
+		const costMobileOutMore = 150;
+
+		const costPixelPerfect = 50;
+		const costRetina = 10;
+		const costGps = 10;
+		const costSpeedWork = 70;
+		const costAnimationBlock = 5;
+
+		const rubToGrivna = 0.388;
+		const rubToBeruss = 0.034;
+
+		$('.price_mobile_output_more').text(costMobileOutMore);
+		$('.price_mobile_output_nine').text(costMobileOutNine);
+		$('.price_mobile_output_seven').text(costMobileOutSeven);
+		$('.price_mobile_output_five').text(costMobileOutFive);
+
+
+		$('.price_courusel_out').text(oneCarouselPrice);
+		$('.price_modal_foc').text(oneModalsPrice);
+		$('.price_calculate_out').text(oneCalculatePrice);
+		$('.price_portfolio_out').text(onePortfolioPrice);
+
+		$('.price_pexelperfect').text(costPixelPerfect);
+		$('.price_retina').text(costRetina);
+		$('.price_gps').text(costGps);
+		$('.price_speed').text(costSpeedWork);
+		$('.price_animation').text(costAnimationBlock);
+
+		let uniquePagePriceOut = uniquePagePrice
+			.toString()
+			.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+
+		$('.price_number_unic').text(uniquePagePriceOut);
+
+		let generalPagePriceOut = generalPagePrice
+			.toString()
+			.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+
+		$('.price_number_general').text(generalPagePriceOut);
+		$('.price_number').text(typicalSectionPrice);
+
+
+
+		formCalcul.on('click keyup change', 'input, select, textatea', function () {
+			formData = formCalcul.serializeJSON();
+			showHideBlocks();
+
+			let totalPrice = 0;
+			totalPrice =
+				formData['lpb-unique'] * uniquePagePrice +
+				formData['lpb-general'] * generalPagePrice +
+				formData['lpb-section'] * typicalSectionPrice +
+				formData['pages-unique-blog'] * uniquePagePrice +
+				formData['pages-general-blog'] * generalPagePrice +
+				formData['pages-unique'] * uniquePagePrice +
+				formData['pages-general'] * generalPagePrice +
+				formData['pages-section'] * typicalSectionPrice +
+				formData['carousel'] * oneCarouselPrice +
+				formData['modals'] * oneModalsPrice +
+				formData['calculate'] * oneCalculatePrice +
+				formData['block-portfolio'] * onePortfolioPrice;
+
+			//расчитать стоимость адаптивности
+			let indexAdaptivCost = 1;
+			if (formData['mobilepoint'] == 0 || formData['mobile'] != 'on') {
+				indexAdaptivCost = 1;
+			} else if (formData['mobilepoint'] == 5) {
+				indexAdaptivCost = (costMobileOutFive / 100) + 1.00;
+				//	console.log(indexAdaptivCost);
+
+			} else if (formData['mobilepoint'] == 7) {
+				indexAdaptivCost = (costMobileOutSeven / 100) + 1.00;
+				$('.price_mobile_output_seven').text(costMobileOutSeven);
+			} else if (formData['mobilepoint'] == 9) {
+				indexAdaptivCost = (costMobileOutNine / 100) + 1.00;
+				$('.price_mobile_output_nine').text(costMobileOutNine);
+			} else if (formData['mobilepoint'] == 10) {
+				indexAdaptivCost = (costMobileOutMore / 100) + 1.0;
+
+			} else {
+				indexAdaptivCost = 1;
+				//	costMobileOut = '';
+			}
+
+
+
+
+
+			// Другие индексы
+			let pixelPerfect = 1;
+			if (formData['PixelPerfect'] == 'on') {
+				pixelPerfect = (costPixelPerfect / 100) + 1.0;
+				//		console.log(pixelPerfect);
+			}
+
+			let animationBlocks = 1;
+			if (formData['AnimationBlocks'] == 'on') {
+				animationBlocks = (costAnimationBlock / 100) + 1.0;
+				//	console.log(animationBlocks);
+			}
+
+
+			//	console.log(pixelPerfect);
+
+			let retinaReady = 1;
+			if (formData['RetinaReady'] == 'on') {
+				retinaReady = (costRetina / 100) + 1.0;
+			}
+			let googlePageSpeed = 1;
+			if (formData['GooglePageSpeed'] == 'on') {
+				googlePageSpeed = (costGps / 100) + 1.0;
+			}
+			let speedWork = 1;
+			if (formData['SpeedWork'] == 'on') {
+				speedWork = (costSpeedWork / 100) + 1.0;
+			}
+
+
+
+
+
+			//console.log('pixelPerfect:', pixelPerfect);
+			//console.log('retinaReady:', retinaReady);
+			//console.log('googlePageSpeed:', googlePageSpeed);
+			///console.log('speedWork:', speedWork);
+
+			let cmsPosadka = 1;
+			if (formData['cms'] == 'onlylayout') {
+				cmsPosadka = 0;
+			} else if (formData['cms'] == 'WordPress') {
+				cmsPosadka =
+					formData['lpb-unique'] * wordpressUniquePrice +
+					formData['lpb-general'] * wordpressGeneralPrice +
+					formData['lpb-section'] * wordpressSectionPrice +
+					formData['pages-unique-blog'] * wordpressUniquePrice +
+					formData['pages-general-blog'] * wordpressGeneralPrice +
+					formData['pages-unique'] * wordpressUniquePrice +
+					formData['pages-general'] * wordpressGeneralPrice +
+					formData['pages-section'] * wordpressSectionPrice +
+					formData['carousel'] * 0 +
+					formData['modals'] * 0 +
+					formData['calculate'] * wordpressCalculatePrice +
+					formData['block-portfolio'] * wordpressPortfolioPrice;
+			} else if (formData['cms'] == 'October') {
+				cmsPosadka = 7000;
+			} else {
+				cmsPosadka = 0;
+			}
+			//	console.log('cmsPosadka:', cmsPosadka);
+			//	console.log('totalPrice:', totalPrice);
+			totalPrice =
+				totalPrice *
+				indexAdaptivCost *
+				pixelPerfect *
+				retinaReady *
+				animationBlocks *
+				googlePageSpeed *
+				speedWork;
+			totalPrice = totalPrice + cmsPosadka;
+
+			totalPrice = Math.ceil(totalPrice);
+
+			let costProjectToGrivna = totalPrice * rubToGrivna;
+			costProjectToGrivna = Math.ceil(costProjectToGrivna);
+
+			let costProjectToBeloruss = totalPrice * rubToBeruss;
+			costProjectToBeloruss = Math.ceil(costProjectToBeloruss);
+
+
+
+
+			totalPrice = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+			costProjectToGrivna = costProjectToGrivna.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+			//	console.log(costProjectToGrivna);
+
+			$('#cost-rubl').val(totalPrice);
+			$('#cost-grivn').val(costProjectToGrivna);
+			$('#cost-bel-rubl').val(costProjectToBeloruss);
+
+			$('#cost_final span').text(totalPrice);
+			$('#cost_final_griv span').text(costProjectToGrivna);
+			$('#cost_final_belrub span').text(costProjectToBeloruss);
+		});
+
+		function showHideBlocks() {
+			if (formData.mobile == 'on') {
+				$('[data-name="mobile"]').show(1000);
+			} else {
+				$('[data-name="mobile"]').hide(1000);
+				$('[name="mobilepoint"]')[0].checked = true;
+			}
+
+			if (formData.dosite == 'sitevisitka') {
+				$('[data-name="site"]').show();
+
+				$('[data-name="landing"]').hide();
+				$('[data-name="blog"]').hide();
+				$('[data-name="landingplusblog"]').hide();
+				// обнулили но не lpb-section pages-unique
+				// pages-general
+				$('[name="pages-unique-blog"]').val('0');
+				$('[name="pages-general-blog"]').val('0');
+				$('[name="pages-section"]').val('0');
+				$('[name="lpb-section"]').val('0');
+				$('[name="lpb-unique"]').val('0');
+				$('[name="lpb-general"]').val('0');
+			} else if (formData.dosite == 'blog') {
+				$('[data-name="landing"]').hide();
+				$('[data-name="site"]').hide();
+				$('[data-name="landingplusblog"]').hide();
+				$('[data-name="blog"]').show();
+				// обнулили но не lpb-section pages-unique-blog
+				// pages-general-blog
+				$('[name="pages-unique"]').val('0');
+				$('[name="pages-general"]').val('0');
+				$('[name="pages-section"]').val('0');
+				$('[name="lpb-section"]').val('0');
+				$('[name="lpb-unique"]').val('0');
+				$('[name="lpb-general"]').val('0');
+			} else if (formData.dosite == 'landingplusblog') {
+				$('[data-name="landingplusblog"]').show();
+				$('[data-name="landing"]').hide();
+				$('[data-name="site"]').hide();
+				$('[data-name="blog"]').hide();
+				// обнулили но не lpb-section lpb-unique lpb-general
+				$('[name="pages-unique"]').val('0');
+				$('[name="pages-general"]').val('0');
+				$('[name="pages-section"]').val('0');
+				$('[name="pages-unique-blog"]').val('0');
+				$('[name="pages-general-blog"]').val('0');
+			} else if (formData.dosite == 'landing') {
+				$('[data-name="landing"]').show();
+				$('[data-name="site"]').hide();
+				$('[data-name="blog"]').hide();
+				$('[data-name="landingplusblog"]').hide();
+				// обнулили но не pages-section
+				$('[name="pages-unique"]').val('0');
+				$('[name="pages-general"]').val('0');
+				$('[name="lpb-section"]').val('0');
+				$('[name="lpb-unique"]').val('0');
+				$('[name="lpb-general"]').val('0');
+				$('[name="pages-unique-blog"]').val('0');
+				$('[name="pages-general-blog"]').val('0');
+			}
+		}
+	</script>
+
+</body>
+
+</html>

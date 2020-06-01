@@ -29,6 +29,10 @@ const del               = require('del');
 const ftp               = require('gulp-ftp');
 const vinyFTP           = require( 'vinyl-ftp' );
 
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');
+const fonter = require('gulp-fonter');
+
 
 function styles() {
 	let sassFiles = [
@@ -187,10 +191,9 @@ function greenstyles() {
 
 function scripts() {
 	var jsFiles = [
-	'app/libs/plagins/jquery.min.js',
-// 'app/libs/plagins/page-scroll-to-id-master/js/minified/jquery.malihu.PageScroll2id.min.js',
-// 'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
-// 'app/libs/plagins/slick/slick.min.js',
+'app/libs/plagins/jquery.min.js',
+'app/libs/plagins/jquery.serializeJSON/jquery.serializeJSON.js',
+'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
 'app/libs/common.js'
 // Always at the end
 ];
@@ -272,13 +275,54 @@ function moveimages() {
 	.pipe(gulp.dest('dist/img'))
 	.pipe(filesize()).on('error', gulpUtil.log);
 }
+function movefounts() {
+	return gulp.src('app/fonts/**/*.{eot,ttf,svg,woff,woff2}')
+		.pipe(gulp.dest('dist/fonts'))
+		.pipe(filesize()).on('error', gulpUtil.log);
+}
+
+function fontswoff() {
+	return gulp.src('app/libs/fonts/**/*.ttf')
+		.pipe(ttf2woff())
+				.pipe(gulp.dest('app/fonts'))
+		.pipe(filesize()).on('error', gulpUtil.log);
+}
+
+
+function fontswoff2() {
+	return gulp.src('app/libs/fonts/**/*.ttf')
+		.pipe(ttf2woff2())
+		.pipe(gulp.dest('app/fonts'))
+		.pipe(filesize()).on('error', gulpUtil.log);
+}
+
+
+function ttf() {
+	return gulp.src('app/libs/founts/**/*.otf')
+		.pipe(fonter({
+			formats:['ttf']
+		}))
+			.pipe(gulp.dest('app/libs/fonts'))
+		.pipe(filesize()).on('error', gulpUtil.log);
+}
+/// https://www.npmjs.com/package/gulp-fonter
+gulp.task('fontswoff', fontswoff);
+gulp.task('fontswoff2', fontswoff2);
+
+gulp.task('ttf', ttf);
+gulp.task('fonts', gulp.parallel(['fontswoff', 'fontswoff2']));
+
+
+
+
+
 
 gulp.task('orangestyles', orangestyles);
 gulp.task('bluestyles', bluestyles);
 gulp.task('pinkstyles', pinkstyles);
 gulp.task('yellowstyles', yellowstyles);
 gulp.task('greenstyles', greenstyles);
-
+gulp.task('movefounts', movefounts);
 
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
@@ -297,7 +341,7 @@ gulp.task('movejs', movejs);
 gulp.task('movecss', movecss);
 gulp.task('moveimages', gulp.series(moveimages));
 
-gulp.task('build', gulp.series('cleanbuild', gulp.parallel('movefile', 'movefilother', 'movejs', 'movecss', 'moveimages' )));
+gulp.task('build', gulp.series('cleanbuild', gulp.parallel('movefounts', 'movefile', 'movefilother', 'movejs', 'movecss', 'moveimages' )));
 
 // FTP: ftp://vh146.timeweb.ru
 // Логин: cc63120

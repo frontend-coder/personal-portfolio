@@ -10,9 +10,7 @@
 .lightbox .lightbox-controls .prev-item .fa,
 .lightbox .lightbox-controls .next-item .fa,
 .portfolio .portfolio-item .portfolio-info .icon .fa,
-
 .portfolio .portfolio-item .portfolio-info .link .fa,
-
 .portfolio .portfolio-filter button.active,
 body.dark .portfolio .portfolio-filter button.active,
 .service .service-item .service-item-inner .icon .fa,
@@ -35,7 +33,9 @@ body.dark .aside_left .nav li a:hover,
   color: #fff;
 }
 
+.contact-form .success,
 .blog .single-item-inner .blog-img .blog-date,
+.blog .blog-item-inner .blog-img .blog-date,
 .blog .blog-item-inner .blog-img .blog-date,
 .service .service-item .service-item-inner:hover .icon,
 .about .about-content .timeline .circle-dot,
@@ -63,4 +63,34 @@ body.dark .portfolio .portfolio-filter button.active,
 .logo a:before {
   border-top: 4px solid #ec1839;
   border-left: 4px solid #ec1839;
+}
+
+.form-group input[type='checkbox']+.css-label:before,
+.style-switcher input[type='radio']+.radio-label:before,
+.mobile_sec input[type='checkbox']+.radio-label:before,
+.radio input[type='radio']+.radio-label:before {
+  border: 1px solid #ec1839;
+}
+
+.form-group input[type='checkbox']:checked+.css-label:before,
+.style-switcher input[type='radio']:checked+.radio-label:before,
+.mobile_sec input[type='checkbox']:checked+.radio-label:before,
+.radio input[type='radio']:checked+.radio-label:before {
+  background-color: #ec1839;
+}
+
+.price-form_item input[type='number'] {
+  border: 1px solid #ec1839;
+}
+
+.price-form_item input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  border-left: 1px solid #ec1839;
+}
+
+.form-group input[type='checkbox']:focus+.css-label:before,
+.style-switcher input[type='radio']:focus+.radio-label:before,
+.mobile_sec input[type='checkbox']:focus+.radio-label:before,
+.radio input[type='radio']:focus+.radio-label:before {
+  border-color: #ec1839;
 }
