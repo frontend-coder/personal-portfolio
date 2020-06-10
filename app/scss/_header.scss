@@ -1,3 +1,12 @@
+// input[data-rule].valid {
+//   border: 1px solid green;
+// }
+
+// input[data-rule],
+// .invalid {
+//   border: 1px solid red;
+// }
+
 .container {
   //  max-width: 1100px;
   margin: auto;
@@ -1033,11 +1042,13 @@
 
 }
 
+.price-form_item .form-group .css-label a,
 .contact .contact-form .form-item label a {
   color: #000;
   transition: all .5s ease;
 }
 
+.price-form_item .form-group .css-label a:hover,
 .contact .contact-form .form-item label a:hover {
   text-decoration: none;
 }
@@ -1230,8 +1241,8 @@ body.dark .aside_left {
   background-color: #222222;
 }
 
-
-body.dark #cost_final,
+body.dark .price-form_item .form-group .css-label a,
+body.dark body.dark #cost_final,
 body.dark .title_minicalcul,
 body.dark .radio-label,
 body.dark .title_calcul,

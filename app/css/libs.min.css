@@ -366,8 +366,6 @@ summary
 
 @charset "UTF-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&display=swap");
-
 *::-webkit-input-placeholder
 {
   color: #202020;
@@ -434,10 +432,10 @@ summary
 
 @font-face
 {
-  font-family: "Montserrat-Medium";
-  src: url("../fonts/Montserrat-Medium/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium/Montserrat-Medium.ttf") format("truetype");
+  font-family: "Rubik";
+  src: url("../fonts/Rubik/rubik-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Rubik/rubik-bold.woff2") format("woff2"), url("../fonts/Rubik/rubik-bold.woff") format("woff"), url("../fonts/Rubik/rubik-bold.ttf") format("truetype");
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-display: swap;
 }
 
@@ -1842,6 +1840,7 @@ select
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
+.price-form_item .form-group .css-label a,
 .contact .contact-form .form-item label a
 {
   color: #000;
@@ -1850,6 +1849,7 @@ select
   transition: all .5s ease;
 }
 
+.price-form_item .form-group .css-label a:hover,
 .contact .contact-form .form-item label a:hover
 {
   text-decoration: none;
@@ -2102,7 +2102,8 @@ body.dark .aside_left
   background-color: #222222;
 }
 
-body.dark #cost_final,
+body.dark .price-form_item .form-group .css-label a,
+body.dark body.dark #cost_final,
 body.dark .title_minicalcul,
 body.dark .radio-label,
 body.dark .title_calcul,

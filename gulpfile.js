@@ -192,8 +192,9 @@ function greenstyles() {
 function scripts() {
 	var jsFiles = [
 'app/libs/plagins/jquery.min.js',
-'app/libs/plagins/jquery.serializeJSON/jquery.serializeJSON.js',
+'app/libs/plagins/validate/inputmask.min.js',
 'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
+'app/libs/plagins/jquery.serializeJSON/jquery.serializeJSON.js',
 'app/libs/common.js'
 // Always at the end
 ];

@@ -2,6 +2,7 @@
 <html lang="ru">
 
 <head>
+
 	<meta charset="utf-8" />
 	<!-- <base href="/"> -->
 	<title>Портфолио работ Василенко Олега</title>
@@ -137,8 +138,25 @@
 
 		const links = document.querySelectorAll('.alternate-style');
 
+
+		let bodySkin = document.querySelectorAll('.body-skin');
+		for (let i = 0; i < bodySkin.length; i++) {
+			bodySkin[i].addEventListener("change", function () {
+				if (this.value === "dark") {
+					document.body.className = "dark";
+					localStorage.setItem('bodySkin', 'dark');
+				} else {
+					document.body.className = 'light';
+					localStorage.setItem('bodySkin', 'light');
+				}
+			})
+		}
+
 		function funonload() {
-			color = localStorage.setItem('colorTheme', 'blue');
+			color = localStorage.getItem('colorTheme', 'pink');
+			bodySkin = localStorage.getItem('bodySkin', 'light');
+			console.info(color);
+			console.info(bodySkin);
 		}
 		funonload();
 
@@ -146,12 +164,13 @@
 			console.log('change');
 		})
 
-		function setActiveStyle(color = localStorage.setItem('colorTheme')) {
 
+
+
+		function setActiveStyle(color = localStorage.setItem('colorTheme')) {
 			for (let i = 0; i < links.length; i++) {
 				if (color == links[i].getAttribute('title')) {
 					links[i].removeAttribute('disabled');
-					//		console.info(links[i].getAttribute('title'));
 					let colorTheme = links[i].getAttribute('title');
 					console.info(colorTheme);
 					localStorage.setItem('colorTheme', colorTheme);
@@ -162,19 +181,14 @@
 			}
 		}
 
-		const bodySkin = document.querySelectorAll('.body-skin');
-		for (let i = 0; i < bodySkin.length; i++) {
-			bodySkin[i].addEventListener("change", function () {
-				if (this.value === "dark") {
-					document.body.className = "dark";
-				} else {
-					document.body.className = 'light';
-				}
-			})
-		}
+
+
+
 		document.querySelector(".toggle-style-switcher").addEventListener("click", () => {
 			document.querySelector(".style-switcher").classList.toggle("open");
 		})
+
+		// Работа с localStorage
 	</script>
 </body>
 

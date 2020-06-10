@@ -1,7 +1,7 @@
 {
-  "name": "startgulp4lite",
+  "name": "personalportfolio",
   "version": "1.0.0",
-  "description": "Простой шаблон для сборки шаблона  ",
+  "description": "Верстаю шаблон для многостраничного сайта-портфолио",
   "main": "gulpfile.js",
   "scripts": {
     "lint": "eslint ./app",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frontend-coder/startgulp4Lite.git"
+    "url": "git+https://github.com/frontend-coder/personal-portfolio.git"
   },
   "author": "Олег Василенко",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/frontend-coder/startgulp4Lite/issues"
+    "url": "https://github.com/frontend-coder/personal-portfolio/issues"
   },
-  "homepage": "https://github.com/frontend-coder/startgulp4Lite#readme",
+  "homepage": "https://github.com/frontend-coder/personal-portfolio#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",

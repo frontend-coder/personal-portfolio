@@ -370,19 +370,20 @@
 									<div id="cost_final_belrub"> <span>170</span> бел.рублей</div>
 
 									<div class="price_name">
-										<input id="your_name" type="text" placeholder="Введите ваше имя" name="name">
+										<input id="your_name" data-rule="name" type="text" placeholder="Введите ваше имя" name="name">
 									</div>
 									<div class="price_name">
-										<input id="your_phone" type="text" placeholder="Введите ваш Е-mail" name="email">
+										<input data-rule="phone" id="your_phone" type="text" placeholder="+7 (999) 999-99-99" name="phone">
 									</div>
 
 									<div class="form-group">
-										<input id="checkbox" name="checkbox" type="checkbox" class="form-control-check" checked disabled>
+										<input data-rule="required" id="checkbox" name="agree" type="checkbox" class="form-control-check"
+											checked disabled>
 										<label for="checkbox" class="css-label">Я даю согласие на обработку своих персональных данных и
 											ознакомлен с <a href="/politiks.html">политикой конфициальности</a>
 										</label>
 									</div>
-
+									<div id="error"></div>
 
 									<button class="btn btn_calc">Отправить</button>
 								</div>
@@ -424,6 +425,10 @@
 	</div>
 	<script src="js/scripts.min.js"></script>
 	<script>
+		let inputsMask = document.querySelector('#your_phone');
+		let im = new Inputmask('+7 (999) 999-99-99');
+		im.mask(inputsMask);
+
 		const navTogglerBtn = document.querySelector('.nav-toggler');
 		const aside = document.querySelector('.aside_left');
 
@@ -438,29 +443,56 @@
 
 		const links = document.querySelectorAll('.alternate-style');
 
-		function setActiveStyle(color) {
+
+		function funonload() {
+			color = localStorage.setItem('colorTheme', 'blue');
+		}
+		funonload();
+
+		window.addEventListener('storage', function (e) {
+			console.log('change');
+		})
+
+
+
+
+
+		function setActiveStyle(color = localStorage.setItem('colorTheme')) {
 			for (let i = 0; i < links.length; i++) {
 				if (color == links[i].getAttribute('title')) {
 					links[i].removeAttribute('disabled');
+					let colorTheme = links[i].getAttribute('title');
+					console.info(colorTheme);
+					localStorage.setItem('colorTheme', colorTheme);
 				} else {
 					links[i].setAttribute('disabled', 'true');
+
 				}
 			}
 		}
 
+
 		const bodySkin = document.querySelectorAll('.body-skin');
+		localStorage.getItem('bodySkin');
 		for (let i = 0; i < bodySkin.length; i++) {
 			bodySkin[i].addEventListener("change", function () {
 				if (this.value === "dark") {
 					document.body.className = "dark";
+					localStorage.setItem('bodySkin', 'dark');
 				} else {
 					document.body.className = 'light';
+					localStorage.setItem('bodySkin', 'light');
 				}
 			})
 		}
+
 		document.querySelector(".toggle-style-switcher").addEventListener("click", () => {
 			document.querySelector(".style-switcher").classList.toggle("open");
 		})
+
+
+
+		// Работа с localStorage
 	</script>
 
 
