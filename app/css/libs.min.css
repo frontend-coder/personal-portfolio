@@ -2744,6 +2744,14 @@ body.dark .shadow-dark
   }
 }
 
+@media only screen and (max-width: 425px)
+{
+  .section .politics-title h2
+  {
+    font-size: 30px;
+  }
+}
+
 @media only screen and (max-width: 412px)
 {
   .mobile_sec .price_mobile_output
@@ -2770,6 +2778,11 @@ body.dark .shadow-dark
   {
     font-size: 32px;
   }
+
+  .section .politics-title h2
+  {
+    font-size: 29px;
+  }
 }
 
 @media only screen and (max-width: 375px)
@@ -2778,6 +2791,14 @@ body.dark .shadow-dark
   {
     height: 160px;
     width: 160px;
+  }
+}
+
+@media only screen and (max-width: 360px)
+{
+  .section .politics-title h2
+  {
+    font-size: 24px;
   }
 }
 
@@ -2794,6 +2815,11 @@ body.dark .shadow-dark
   .home .intro h1
   {
     font-size: 26px;
+  }
+
+  .section .politics-title h2
+  {
+    font-size: 24px;
   }
 }
 

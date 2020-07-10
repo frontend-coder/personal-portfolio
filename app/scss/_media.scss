@@ -290,7 +290,12 @@
 
 }
 
-@media only screen and (max-width: 425px) {}
+@media only screen and (max-width: 425px) {
+	.section .politics-title h2 {
+		font-size: 30px;
+	}
+
+}
 
 @media only screen and (max-width: 414px) {}
 
@@ -318,6 +323,10 @@
 		font-size: 32px;
 	}
 
+	.section .politics-title h2 {
+		font-size: 29px;
+	}
+
 }
 
 @media only screen and (max-width: 375px) {
@@ -327,7 +336,11 @@
 	}
 }
 
-@media only screen and (max-width: 360px) {}
+@media only screen and (max-width: 360px) {
+	.section .politics-title h2 {
+		font-size: 24px;
+	}
+}
 
 @media only screen and (max-width: 320px) {
 
@@ -342,4 +355,7 @@
 		font-size: 26px;
 	}
 
+	.section .politics-title h2 {
+		font-size: 24px;
+	}
 }
