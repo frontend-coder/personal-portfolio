@@ -1,9 +1,24 @@
 /*==========  Desktop First  ==========*/
 @media only screen and (max-width : 1440px) {}
 
-@media only screen and (max-width : 1280px) {}
+@media only screen and (max-width : 1336px) {
+	/* делать это разрешение */
+}
 
-@media only screen and (max-width : 1200px) {}
+@media only screen and (max-width : 1280px) {
+
+	/* делать это разрешение */
+	// .aside_left .nav {
+	// 	margin-bottom: 19vh;
+	// }
+
+
+}
+
+@media only screen and (max-width : 1200px) {
+	/* делать это разрешение */
+}
+
 
 @media only screen and (max-width : 1199px) {
 	.section .container {
@@ -17,7 +32,6 @@
 	.aside_left.open {
 		left: 0;
 	}
-
 
 	.section,
 	.main-content {
@@ -47,7 +61,14 @@
 @media only screen and (max-width : 1190px) {}
 
 @media screen and (max-width: 1080px) {
+
 	/* делать это разрешение */
+	.aside_left .nav-toggler {
+		left: 14px;
+	}
+
+
+
 }
 
 /* первое разрешение под казачика */
@@ -57,7 +78,7 @@
 }
 
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 992px) {
 
 	.blog .blog-item,
 	.portfolio .portfolio-item,
@@ -67,14 +88,45 @@
 	}
 }
 
+@media only screen and (max-width : 980px) {
+	/* делать это разрешение */
+}
 
-@media only screen and (max-width: 834px) {}
+
+@media only screen and (max-width: 834px) {
+	.about .about-content .personal-info {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.about .about-content .skills {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.about .about-content .education {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.about .about-content .experience {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+
+
+}
+
+@media only screen and (max-width : 815px) {
+	/* не обьязательно делать это разрешение */
+}
 
 @media only screen and (max-width: 812px) {}
 
 @media only screen and (max-width: 800px) {}
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 
 	/* делать это разрешение */
 	.contact .contact-form .col-6,
@@ -106,14 +158,55 @@
 @media only screen and (max-width: 667px) {
 	/* делать это разрешение */
 
+	.blog .blog-item,
+	.portfolio .portfolio-item,
+	.service .service-item {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.portfolio .portfolio-filter button {
+		margin: 0 0 15px 0;
+	}
+
+	.portfolio .portfolio-filter {
+		margin-bottom: 25px;
+	}
+
+	.section .section-title h2,
+	.logo a {
+		font-size: 37px;
+	}
+
 
 }
 
-@media only screen and (max-width: 640px) {}
+@media only screen and (max-width: 640px) {
+	.about .about-content .personal-info .info-item {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.about .about-content .personal-info .info-item p {
+		position: relative;
+	}
+
+	.about .about-content .personal-info .info-item p span {
+		position: absolute;
+		right: 0;
+		// top: 0;
+	}
+
+
+}
 
 @media only screen and (max-width: 600px) {
-	/* делать это разрешение */
 
+	/* делать это разрешение */
+	.logo a,
+	.section .section-title h2 {
+		font-size: 36px;
+	}
 
 }
 
@@ -126,10 +219,40 @@
 	}
 }
 
-@media only screen and (max-width: 568px) {}
+@media only screen and (max-width: 568px) {
+	.home .intro img {
+		height: 180px;
+		width: 180px;
+	}
+
+
+
+}
 
 @media only screen and (max-width: 480px) {
+
 	/* делать это разрешение */
+	.section {
+		padding: 0 35px;
+	}
+
+	.container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.aside_left .nav-toggler {
+		left: 8px;
+	}
+
+	.about .about-content .about-text h3 {
+		font-size: 20px;
+	}
+
+	.portfolio .portfolio-item .portfolio-info h5,
+	.portfolio .portfolio-item .portfolio-info h4 {
+		font-size: 16px;
+	}
 
 
 }
@@ -140,37 +263,45 @@
 
 @media only screen and (max-width: 412px) {}
 
-@media only screen and (max-width: 384px) {
-	/* делать это разрешение */
+@media only screen and (max-width: 387px) {
+	/* не обьязательно делать это разрешение */
+}
 
+
+@media only screen and (max-width: 384px) {
+
+	/* делать это разрешение */
+	.aside_left .nav-toggler.open {
+		left: 218px;
+	}
+
+	.logo a,
+	.section .section-title h2 {
+		font-size: 32px;
+	}
 
 }
 
-@media only screen and (max-width: 375px) {}
+@media only screen and (max-width: 375px) {
+	.home .intro img {
+		height: 160px;
+		width: 160px;
+	}
+}
 
 @media only screen and (max-width: 360px) {}
 
 @media only screen and (max-width: 320px) {
-	/* делать это разрешение */
 
+	/* делать это разрешение */
+	.about .about-content .about-text h3 {
+		font-size: 20px;
+	}
+
+	.logo a,
+	.section .section-title h2,
+	.home .intro h1 {
+		font-size: 26px;
+	}
 
 }
-
-
-
-/*==========  Mobile First  ==========*/
-
-
-
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
-
-/* Medium devices (tablets, 768px and up)  */
-@media (min-width: 768px) {}
-
-/* Large devices (desktops, 992px and up)  */
-@media (min-width: 992px) {}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}

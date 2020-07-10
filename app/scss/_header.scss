@@ -107,7 +107,7 @@
 
 .aside_left .nav {
   //  background-color: #ededed;
-  margin: 80px 0 40vh 0;
+  margin: 80px 0 0 0;
   list-style: none;
 
 }
@@ -131,6 +131,11 @@
 
 .aside_left .nav li a:not(.active):hover {
   padding-left: 5px;
+}
+
+.copyright_text {
+  position: absolute;
+  bottom: 10px;
 }
 
 .copyright_text ul li a,
@@ -247,6 +252,7 @@
 
 .social-link {
   margin-top: 25px;
+  padding: 0;
 }
 
 .social-link li {
@@ -258,7 +264,7 @@
 .social-link li a {
   width: 35px;
   height: 35px;
-  line-height: 35px;
+  line-height: 36px;
   display: inline-block;
   text-align: center;
   color: #fff;
@@ -729,6 +735,16 @@
   transition: all .3s ease;
   transform: translateX(20px);
   opacity: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .in_develop {
+  width: 200px;
+  white-space: nowrap;
+  border-radius: 20px;
+  line-height: 40px;
+  font-size: 1.3rem;
+  cursor: progress;
+
 }
 
 .portfolio .portfolio-item .portfolio-info .link {
@@ -1241,6 +1257,7 @@ body.dark .aside_left {
   background-color: #222222;
 }
 
+body.dark .final_price,
 body.dark .price-form_item .form-group .css-label a,
 body.dark body.dark #cost_final,
 body.dark .title_minicalcul,
