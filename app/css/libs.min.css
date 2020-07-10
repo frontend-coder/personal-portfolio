@@ -2503,11 +2503,15 @@ body.dark .shadow-dark
 
 @media only screen and (max-width: 1024px)
 {
+  
+  .calculate__contents
+  {
+    padding: 0 15px;
+  }
 }
 
 @media only screen and (max-width: 992px)
 {
-  .blog .blog-item,
   .portfolio .portfolio-item,
   .service .service-item
   {
@@ -2515,6 +2519,22 @@ body.dark .shadow-dark
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
+  }
+
+  .blog .blog-item
+  {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .blog .blog-item-inner
+  {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 31.33%;
+    flex: 0 0 31.33%;
+    max-width: 31.33%;
   }
 }
 
@@ -2581,6 +2601,32 @@ body.dark .shadow-dark
   .portfolio .portfolio-filter button
   {
     margin-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 736px)
+{
+  .price-form_item
+  {
+    width: 100%;
+  }
+
+  .blog .blog-item
+  {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .blog .blog-item-inner
+  {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
   }
 }
 
@@ -2695,6 +2741,15 @@ body.dark .shadow-dark
   .portfolio .portfolio-item .portfolio-info h4
   {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 412px)
+{
+  .mobile_sec .price_mobile_output
+  {
+    display: block;
+    margin-left: 35px;
   }
 }
 

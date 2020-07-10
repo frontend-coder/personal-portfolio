@@ -73,18 +73,33 @@
 
 /* первое разрешение под казачика */
 @media only screen and (max-width: 1024px) {
+
 	/* делать это разрешение */
+	.calculate__contents {
+		padding: 0 15px;
+	}
+
 
 }
 
 
 @media only screen and (max-width: 992px) {
 
-	.blog .blog-item,
+
 	.portfolio .portfolio-item,
 	.service .service-item {
 		flex: 0 0 50%;
 		max-width: 50%;
+	}
+
+	.blog .blog-item {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.blog .blog-item-inner {
+		flex: 0 0 31.33%;
+		max-width: 31.33%;
 	}
 }
 
@@ -149,7 +164,25 @@
 /* end  (max-width: 768px) */
 @media only screen and (max-width: 740px) {}
 
-@media only screen and (max-width: 736px) {}
+@media only screen and (max-width: 736px) {
+	.price-form_item {
+		width: 100%;
+	}
+
+	.blog .blog-item {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.blog .blog-item-inner {
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 25px;
+	}
+
+
+
+}
 
 @media only screen and (max-width: 734px) {}
 
@@ -261,7 +294,12 @@
 
 @media only screen and (max-width: 414px) {}
 
-@media only screen and (max-width: 412px) {}
+@media only screen and (max-width: 412px) {
+	.mobile_sec .price_mobile_output {
+		display: block;
+		margin-left: 35px;
+	}
+}
 
 @media only screen and (max-width: 387px) {
 	/* не обьязательно делать это разрешение */
