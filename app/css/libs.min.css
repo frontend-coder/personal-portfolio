@@ -522,6 +522,12 @@ select
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .section
@@ -656,8 +662,7 @@ select
 
 .copyright_text
 {
-  position: absolute;
-  bottom: 10px;
+  margin-top: auto;
 }
 
 .copyright_text ul li a,
