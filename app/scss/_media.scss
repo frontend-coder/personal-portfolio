@@ -1,174 +1,325 @@
-/*==========  Desktop First  ==========*/
-@media only screen and (max-width : 1440px) {}
+/* ==========  Desktop First  ========== */
+@media only screen and (max-width: 1440px) {}
 
-@media only screen and (max-width : 1280px) {}
-
-@media only screen and (max-width : 1200px) {}
-
-@media only screen and (max-width : 1199px) {
-	.section .container {
-		padding-top: 70px;
-	}
-	.aside_left {
-		left: -270px;
-	}
-
-	.aside_left.open {
-		left: 0;
-	}
-
-	.section,
-	.main-content {
-		left: 0;
-	}
-
-	.section.open {
-		left: 270px;
-	}
-
-	.aside_left .nav-toggler {
-		display: flex;
-		left: 30px;
-	}
-
-	.aside_left .nav-toggler.open {
-		left: 280px;
-	}
-
-	.aside_left .about .about-content .personal-info .info-item p span {
-		display: block;
-		margin-left: 0;
-	}
-
+@media only screen and (max-width: 1336px) {
+  /* делать это разрешение */
 }
 
-@media only screen and (max-width : 1190px) {}
+@media only screen and (max-width: 1280px) {
+  /* делать это разрешение */
+  // .aside_left .nav {
+  // 	margin-bottom: 19vh;
+  // }
+}
+
+@media only screen and (max-width: 1200px) {
+  /* делать это разрешение */
+}
+
+@media only screen and (max-width: 1199px) {
+  .section .container {
+    padding-top: 70px;
+  }
+
+  .aside_left {
+    left: -270px;
+  }
+
+  .aside_left.open {
+    left: 0;
+  }
+
+  .section,
+  .main-content {
+    left: 0;
+  }
+
+  .section.open {
+    left: 270px;
+  }
+
+  .aside_left .nav-toggler {
+    left: 30px;
+    display: flex;
+  }
+
+  .aside_left .nav-toggler.open {
+    left: 280px;
+  }
+
+  .aside_left .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1190px) {}
 
 @media screen and (max-width: 1080px) {
-	/* делать это разрешение */
+  /* делать это разрешение */
+  .aside_left .nav-toggler {
+    left: 14px;
+  }
 }
 
 /* первое разрешение под казачика */
 @media only screen and (max-width: 1024px) {
-	/* делать это разрешение */
-
+  /* делать это разрешение */
+  .calculate__contents {
+    padding: 0 15px;
+  }
 }
 
+@media only screen and (max-width: 992px) {
+  .portfolio .portfolio-item,
+  .service .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 
-@media only screen and (max-width: 991px) {
+  .blog .blog-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 
-	.blog .blog-item,
-	.portfolio .portfolio-item,
-	.service .service-item {
-		flex: 0 0 50%;
-		max-width: 50%;
-	}
+  .blog .blog-item-inner {
+    flex: 0 0 31.33%;
+    max-width: 31.33%;
+  }
 }
 
+@media only screen and (max-width: 980px) {
+  /* делать это разрешение */
+}
 
-@media only screen and (max-width: 834px) {}
+@media only screen and (max-width: 834px) {
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .skills {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .education {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .experience {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 815px) {
+  /* не обьязательно делать это разрешение */
+}
 
 @media only screen and (max-width: 812px) {}
 
 @media only screen and (max-width: 800px) {}
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+  /* делать это разрешение */
+  .contact .contact-form .col-6,
+  .blog .blog-item,
+  .service .service-item,
+  .about .about-content .experience,
+  .about .about-content .education,
+  .about .about-content .skills,
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 
-	/* делать это разрешение */
-	.contact .contact-form .col-6,
-	.blog .blog-item,
-	.service .service-item,
-	.about .about-content .experience,
-	.about .about-content .education,
-	.about .about-content .skills,
-	.about .about-content .personal-info {
-		flex: 0 0 100%;
-		max-width: 100%;
-	}
+  .portfolio .portfolio-filter button {
+    margin-bottom: 8px;
+  }
 
-	.portfolio .portfolio-filter button {
-		margin-bottom: 8px;
-	}
+  .js-validate-error-label {
+    font-size: 12px;
+  }
 }
 
 
 /* end  (max-width: 768px) */
 @media only screen and (max-width: 740px) {}
 
-@media only screen and (max-width: 736px) {}
+@media only screen and (max-width: 736px) {
+  .price-form_item {
+    width: 100%;
+  }
+
+  .blog .blog-item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .blog .blog-item-inner {
+    flex: 0 0 100%;
+    margin-bottom: 25px;
+    max-width: 100%;
+  }
+}
 
 @media only screen and (max-width: 734px) {}
 
 @media only screen and (max-width: 684px) {}
 
 @media only screen and (max-width: 667px) {
-	/* делать это разрешение */
+  /* делать это разрешение */
 
+  .blog .blog-item,
+  .portfolio .portfolio-item,
+  .service .service-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 
+  .portfolio .portfolio-filter button {
+    margin: 0 0 15px;
+  }
+
+  .portfolio .portfolio-filter {
+    margin-bottom: 25px;
+  }
+
+  .section .section-title h2,
+  .logo a {
+    font-size: 37px;
+  }
 }
 
-@media only screen and (max-width: 640px) {}
+@media only screen and (max-width: 640px) {
+  .about .about-content .personal-info .info-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .personal-info .info-item p {
+    position: relative;
+  }
+
+  .about .about-content .personal-info .info-item p span {
+    position: absolute;
+    right: 0;
+
+    // top: 0;
+  }
+}
 
 @media only screen and (max-width: 600px) {
-	/* делать это разрешение */
-
-
+  /* делать это разрешение */
+  .logo a,
+  .section .section-title h2 {
+    font-size: 36px;
+  }
 }
 
 @media only screen and (max-width: 575px) {
-
-	.contact .contact-info-item,
-	.portfolio .portfolio-item {
-		flex: 0 0 100%;
-		max-width: 100%;
-	}
+  .contact .contact-info-item,
+  .portfolio .portfolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
-@media only screen and (max-width: 568px) {}
+@media only screen and (max-width: 568px) {
+  .home .intro img {
+    width: 180px;
+    height: 180px;
+  }
+}
 
 @media only screen and (max-width: 480px) {
-	/* делать это разрешение */
+  /* делать это разрешение */
+  .section {
+    padding: 0 35px;
+  }
 
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 
+  .aside_left .nav-toggler {
+    left: 8px;
+  }
+
+  .about .about-content .about-text h3 {
+    font-size: 20px;
+  }
+
+  .portfolio .portfolio-item .portfolio-info h5,
+  .portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 16px;
+  }
 }
 
-@media only screen and (max-width: 425px) {}
+@media only screen and (max-width: 425px) {
+  .section .politics-title h2 {
+    font-size: 30px;
+  }
+}
 
 @media only screen and (max-width: 414px) {}
 
-@media only screen and (max-width: 412px) {}
+@media only screen and (max-width: 412px) {
+  .mobile_sec .price_mobile_output {
+    display: block;
+    margin-left: 35px;
+  }
+}
+
+@media only screen and (max-width: 387px) {
+  /* не обьязательно делать это разрешение */
+}
 
 @media only screen and (max-width: 384px) {
-	/* делать это разрешение */
+  /* делать это разрешение */
+  .aside_left .nav-toggler.open {
+    left: 218px;
+  }
 
+  .logo a,
+  .section .section-title h2 {
+    font-size: 32px;
+  }
 
+  .section .politics-title h2 {
+    font-size: 29px;
+  }
 }
 
-@media only screen and (max-width: 375px) {}
+@media only screen and (max-width: 375px) {
+  .home .intro img {
+    width: 160px;
+    height: 160px;
+  }
+}
 
-@media only screen and (max-width: 360px) {}
+@media only screen and (max-width: 360px) {
+  .section .politics-title h2 {
+    font-size: 24px;
+  }
+}
 
 @media only screen and (max-width: 320px) {
-	/* делать это разрешение */
+  /* делать это разрешение */
+  .about .about-content .about-text h3 {
+    font-size: 20px;
+  }
 
+  .logo a,
+  .section .section-title h2,
+  .home .intro h1 {
+    font-size: 26px;
+  }
 
+  .section .politics-title h2 {
+    font-size: 24px;
+  }
 }
-
-
-
-/*==========  Mobile First  ==========*/
-
-
-
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
-
-/* Medium devices (tablets, 768px and up)  */
-@media (min-width: 768px) {}
-
-/* Large devices (desktops, 992px and up)  */
-@media (min-width: 992px) {}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}

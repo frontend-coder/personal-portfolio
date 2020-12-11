@@ -1,44 +1,22 @@
-/* font-family: "OpenSansRegular"; */
 @font-face {
 	font-family: "Montserrat-Regular";
 	src: url("../fonts/Montserrat/Montserrat-Regular.eot?#iefix")format("embedded-opentype"),
-	//		url("../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"),
+		//		url("../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"),
 		url("../fonts/Montserrat/Montserrat-Regular.woff") format("woff"),
 		url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
-		font-display: fallback;
+	font-display: fallback;
 }
 
 @font-face {
-	font-family: "Montserrat-Bold";
-	src: url("../fonts/Montserrat-Bold/Montserrat-Bold.eot?#iefix")format("embedded-opentype"),
-//			url("../fonts/Montserrat-Bold/Montserrat-Bold.woff2") format("woff2"),
-		url("../fonts/Montserrat-Bold/Montserrat-Bold.woff") format("woff"),
-		url("../fonts/Montserrat-Bold/Montserrat-Bold.ttf") format("truetype");
+	font-family: "Rubik";
+	src: url("../fonts/Rubik/rubik-bold.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/Rubik/rubik-bold.woff2") format("woff2"),
+		url("../fonts/Rubik/rubik-bold.woff") format("woff"),
+		url("../fonts/Rubik/rubik-bold.ttf") format("truetype");
 	font-style: normal;
 	font-weight: 700;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Montserrat-SemiBold";
-	src: url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.eot?#iefix")format("embedded-opentype"),
-//			url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff2") format("woff2"),
-		url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff") format("woff"),
-		url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.ttf") format("truetype");
-	font-style: normal;
-	font-weight: 600;
-	font-display: swap;
-}
-@font-face {
-	font-family: "Montserrat-Medium";
-	src: url("../fonts/Montserrat-Medium/Montserrat-Medium.eot?#iefix")format("embedded-opentype"),
-//			url("../fonts/Montserrat-Medium/Montserrat-Medium.woff2") format("woff2"),
-		url("../fonts/Montserrat-Medium/Montserrat-Medium.woff") format("woff"),
-		url("../fonts/Montserrat-Medium/Montserrat-Medium.ttf") format("truetype");
-	font-style: normal;
-	font-weight: 500;
 	font-display: swap;
 }
 
@@ -66,4 +44,3 @@
 // 800 — сверхжирное;
 // 900 — тяжёлое.
 // https://webfonts.pro/
-

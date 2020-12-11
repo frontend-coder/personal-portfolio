@@ -26,8 +26,6 @@
 }
 
 @import "fonts";
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&display=swap');
-//font-family: 'Rubik', sans-serif;
 
 html {
 	width: 100%;
@@ -37,6 +35,7 @@ html {
 	margin: 0;
 	padding: 0;
 	-webkit-backface-visibility: hidden;
+	background-color: #fdf9ff;
 	/* overflow-x: hidden; */
 }
 
@@ -83,6 +82,6 @@ select {
 
 @import "header"; // стили шапки сайта
 @import "allstyle"; // стили шапки сайта
-
+@import 'calculate'; // стили шапки сайта
 @import "footer"; // стили шапки сайта
 @import "media"; // Always at the end
