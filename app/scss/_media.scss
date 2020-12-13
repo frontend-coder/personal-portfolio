@@ -1,20 +1,4 @@
 /* ==========  Desktop First  ========== */
-@media only screen and (max-width: 1440px) {}
-
-@media only screen and (max-width: 1336px) {
-  /* делать это разрешение */
-}
-
-@media only screen and (max-width: 1280px) {
-  /* делать это разрешение */
-  // .aside_left .nav {
-  // 	margin-bottom: 19vh;
-  // }
-}
-
-@media only screen and (max-width: 1200px) {
-  /* делать это разрешение */
-}
 
 @media only screen and (max-width: 1199px) {
   .section .container {
@@ -52,8 +36,6 @@
     margin-left: 0;
   }
 }
-
-@media only screen and (max-width: 1190px) {}
 
 @media screen and (max-width: 1080px) {
   /* делать это разрешение */
@@ -114,14 +96,6 @@
   }
 }
 
-@media only screen and (max-width: 815px) {
-  /* не обьязательно делать это разрешение */
-}
-
-@media only screen and (max-width: 812px) {}
-
-@media only screen and (max-width: 800px) {}
-
 @media only screen and (max-width: 768px) {
   /* делать это разрешение */
   .contact .contact-form .col-6,
@@ -144,10 +118,7 @@
   }
 }
 
-
 /* end  (max-width: 768px) */
-@media only screen and (max-width: 740px) {}
-
 @media only screen and (max-width: 736px) {
   .price-form_item {
     width: 100%;
@@ -164,10 +135,6 @@
     max-width: 100%;
   }
 }
-
-@media only screen and (max-width: 734px) {}
-
-@media only screen and (max-width: 684px) {}
 
 @media only screen and (max-width: 667px) {
   /* делать это разрешение */
@@ -265,8 +232,6 @@
   }
 }
 
-@media only screen and (max-width: 414px) {}
-
 @media only screen and (max-width: 412px) {
   .mobile_sec .price_mobile_output {
     display: block;
@@ -321,5 +286,11 @@
 
   .section .politics-title h2 {
     font-size: 24px;
+  }
+}
+
+@media only screen and (max-height: 645px) {
+  .copyright_text {
+    margin-top: 40px;
   }
 }

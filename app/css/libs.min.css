@@ -1089,4 +1089,7 @@ body.dark .shadow-dark{box-shadow:none}
 .home .intro h1,.logo a,.section .section-title h2{font-size:26px}
 .section .politics-title h2{font-size:24px}
 }
+@media only screen and (max-height:645px){
+.copyright_text{margin-top:40px}
+}
 /*# sourceMappingURL=libs.min.css.map */

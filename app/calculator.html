@@ -30,13 +30,7 @@
     }
 	</style>
 	<link rel="stylesheet" href="css/libs.min.css" />
-	<link rel="stylesheet" href="css/pink.css" />
-
-	<link rel="stylesheet" class="alternate-style" title="pink" href="css/pink.css" disabled>
-	<link rel="stylesheet" class="alternate-style" title="blue" href="css/blue.css" disabled>
-	<link rel="stylesheet" class="alternate-style" title="orange" href="css/orange.css" disabled>
-	<link rel="stylesheet" class="alternate-style" title="yellow" href="css/yellow.css" disabled>
-	<link rel="stylesheet" class="alternate-style" title="green" href="css/green.css" disabled>
+	<link id="change__style" rel="stylesheet" href="css/pink.css" />
 
 </head>
 
@@ -454,30 +448,31 @@
 		</div>
 	</div>
 
-
 	<div class="style-switcher">
 		<div class="toggle-style-switcher">
 			<i class="fa fa-cog fa-spin"></i>
 		</div>
 		<h5>Изменить оформление</h5>
-		<ul>
-			<li> <a href="javascript:void(0)" title="pink" style="background-color: #ec1839;"
-					onclick="setActiveStyle('pink')"></a> </li>
-			<li> <a href="javascript:void(0)" title="blue" style="background-color: #2196f3;"
-					onclick="setActiveStyle('blue')"></a> </li>
-			<li> <a href="javascript:void(0)" title="orange" style="background-color: #fa5b0f;"
-					onclick="setActiveStyle('orange')"></a> </li>
-			<li> <a href="javascript:void(0)" title="yellow" style="background-color: #ffb400;"
-					onclick="setActiveStyle('yellow')"></a> </li>
-			<li> <a href="javascript:void(0)" title="green" style="background-color: #72b626;"
-					onclick="setActiveStyle('green')"></a> </li>
-		</ul>
-		<h5>Изменить оформление</h5>
-		<input id="light-theme" type="radio" class="body-skin" name="body-style" value="light" checked="true">
-		<label for="light-theme" class="radio-label">светлая</label>
-		<input id="dark-theme" type="radio" class="body-skin" name="body-style" value="dark">
-		<label for="dark-theme" class="radio-label">темная</label>
+		<div class="decoration_scene">
+			<div id="scene__pink" class="scene__items" style="background-color: #ec1839;"></div>
+			<div id="scene__blue" class="scene__items" style="background-color: #2196f3;"></div>
+			<div id="scene__orange" class="scene__items" style="background-color: #fa5b0f;"></div>
+			<div id="scene__yellow" class="scene__items" style="background-color: #ffb400;"></div>
+			<div id="scene__green" class="scene__items" style="background-color: #72b626;"></div>
+		</div>
+		<h5>Изменить тему</h5>
+		<div class="change__thene">
+			<div class="change__thene_item">
+				<div id="light-theme" class="body-skin body-skyn__light"> светлая</div>
+			</div>
+			<div class="change__thene_item">
+				<div id="dark-theme" class="body-skin body-skyn__dark"> темная</div>
+			</div>
+		</div>
 	</div>
+
+
+
 	<script src="js/scripts.min.js"></script>
 
 
@@ -550,11 +545,8 @@
     'send goal',
   );
 </script>
-	<script>
-		let inputsMask = document.querySelector('#your_phone');
-		let im = new Inputmask('+7 (999) 999-99-99');
-		im.mask(inputsMask);
 
+	<script>
 		const navTogglerBtn = document.querySelector('.nav-toggler');
 		const aside = document.querySelector('.aside_left');
 
@@ -567,30 +559,128 @@
 			navTogglerBtn.classList.toggle('open');
 		}
 
-		const links = document.querySelectorAll('.alternate-style');
-
-		const bodySkin = document.querySelectorAll('.body-skin');
-		localStorage.getItem('bodySkin');
-		for (let i = 0; i < bodySkin.length; i++) {
-			bodySkin[i].addEventListener("change", function () {
-				if (this.value === "dark") {
-					document.body.className = "dark";
-					localStorage.setItem('bodySkin', 'dark');
-				} else {
-					document.body.className = 'light';
-					localStorage.setItem('bodySkin', 'light');
-				}
-			})
-		}
-
 		document.querySelector(".toggle-style-switcher").addEventListener("click", () => {
 			document.querySelector(".style-switcher").classList.toggle("open");
 		})
-
-
-
-		// Работа с localStorage
 	</script>
+
+	<script>
+		function setTheme() {
+			if (localStorage.getItem('theme') == null) {
+				localStorage.setItem('theme', 'light');
+				document.body.classList.add(localStorage.getItem('theme'));
+			} else {
+				document.body.classList.add(localStorage.getItem('theme'));
+			}
+		}
+		setTheme();
+		const darkThemeBtn = document.querySelector('#dark-theme');
+
+		function darkToggleTheme() {
+			if (localStorage.getItem('theme') == 'light') {
+				localStorage.setItem('theme', 'dark');
+				document.body.classList.remove('light');
+				document.body.classList.add(localStorage.getItem('theme'));
+			} else {
+				document.body.classList.add(localStorage.getItem('theme'));
+			}
+		}
+
+
+		darkThemeBtn.addEventListener('click', (e) => {
+			darkToggleTheme();
+		});
+
+		const lightThemeBtn = document.querySelector('#light-theme');
+
+		function lightToggleTheme() {
+			if (localStorage.getItem('theme') == 'dark') {
+				localStorage.setItem('theme', 'light');
+				document.body.classList.remove('dark');
+				document.body.classList.add(localStorage.getItem('theme'));
+			} else {
+				document.body.classList.add(localStorage.getItem('theme'));
+			}
+		}
+
+		lightThemeBtn.addEventListener('click', (e) => {
+			lightToggleTheme();
+		});
+
+		function setScene() {
+			if (localStorage.getItem('scenetheme') == null) {
+				localStorage.setItem('scenetheme', 'css/pink.css');
+				let ownStyle = localStorage.getItem('scenetheme');
+				document.querySelector('#change__style').href = ownStyle;
+			} else {
+				let ownStyle = localStorage.getItem('scenetheme');
+				document.querySelector('#change__style').href = ownStyle;
+			}
+		}
+		setScene();
+
+		const scenePinkBtn = document.querySelector('#scene__pink');
+
+		function scenePink() {
+			localStorage.setItem('scenetheme', 'css/pink.css');
+			let pinkStyle = localStorage.getItem('scenetheme');
+			document.querySelector('#change__style').href = pinkStyle;
+		}
+
+		scenePinkBtn.addEventListener('click', (e) => {
+			scenePink();
+		});
+
+		const sceneBlueBtn = document.querySelector('#scene__blue');
+
+		function sceneBlue() {
+			localStorage.setItem('scenetheme', 'css/blue.css');
+			let pinkStyle = localStorage.getItem('scenetheme');
+			document.querySelector('#change__style').href = pinkStyle;
+		}
+		sceneBlueBtn.addEventListener('click', (e) => {
+			sceneBlue();
+		});
+
+		const sceneOrangeBtn = document.querySelector('#scene__orange');
+
+		function sceneOrange() {
+			localStorage.setItem('scenetheme', 'css/orange.css');
+			let pinkStyle = localStorage.getItem('scenetheme');
+			document.querySelector('#change__style').href = pinkStyle;
+		}
+		sceneOrangeBtn.addEventListener('click', (e) => {
+			sceneOrange();
+		});
+
+		const sceneYellowBtn = document.querySelector('#scene__yellow');
+
+		function sceneYellow() {
+			localStorage.setItem('scenetheme', 'css/yellow.css');
+			let pinkStyle = localStorage.getItem('scenetheme');
+			document.querySelector('#change__style').href = pinkStyle;
+		}
+		sceneYellowBtn.addEventListener('click', (e) => {
+			sceneYellow();
+		});
+
+		const sceneGreenBtn = document.querySelector('#scene__green');
+
+		function sceneGreen() {
+			localStorage.setItem('scenetheme', 'css/green.css');
+			document.querySelector('#change__style').href = localStorage.getItem('scenetheme');
+		}
+		sceneGreenBtn.addEventListener('click', (e) => {
+			sceneGreen();
+		});
+	</script>
+
+	<script>
+		let inputsMask = document.querySelector('#your_phone');
+		let im = new Inputmask('+7 (999) 999-99-99');
+		im.mask(inputsMask);
+
+</script>
 
 	<script>
 		const formCalcul = $('#price-form');

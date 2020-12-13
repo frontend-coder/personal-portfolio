@@ -30,7 +30,7 @@
     }
 	</style>
 	<link rel="stylesheet" href="css/libs.min.css" />
-	<link rel="stylesheet" href="css/pink.css" />
+	<link id="change__style" rel="stylesheet" href="css/pink.css" />
 
 
 </head>
@@ -356,13 +356,18 @@
 		})
 	</script>
 
-	<script>
-		// Начало кода
-		function setTheme() {
-			document.body.classList.add(localStorage.getItem('theme'));
-		}
-		setTheme();
 
+	<script>
+
+		function setTheme() {
+			if (localStorage.getItem('theme') == null) {
+				localStorage.setItem('theme', 'light');
+			document.body.classList.add(localStorage.getItem('theme'));
+			} else {
+			document.body.classList.add(localStorage.getItem('theme'));
+			}
+		}
+setTheme();
 		const darkThemeBtn = document.querySelector('#dark-theme');
 
 		function darkToggleTheme() {
@@ -395,27 +400,76 @@
 		lightThemeBtn.addEventListener('click', (e) => {
 			lightToggleTheme();
 		});
-
-		// конец кода
-	</script>
-
-	<script>
-		let chanche = document.querySelectorAll(".change__oform input[type=radio]");
-
-
-
-		function clickTheme() {
-			let getColorStyle = document.querySelectorAll(".change__oform input[type=radio]");
-			console.info(getColorStyle);
-			for (let i = 0; i < getColorStyle.length; i++) {
-				if (getColorStyle[i].checked) {
-					let rate = getColorStyle[i].value;
-					console.info(rate);
-				}
+	
+		function setScene() {
+			if (localStorage.getItem('scenetheme') == null) {
+				localStorage.setItem('scenetheme', 'css/pink.css');
+			let ownStyle = localStorage.getItem('scenetheme');
+			document.querySelector('#change__style').href = ownStyle;
+			} else {
+			let ownStyle = localStorage.getItem('scenetheme');
+			document.querySelector('#change__style').href = ownStyle;
 			}
 		}
-		chanche.onclick = clickTheme();
+		setScene();
+
+		const scenePinkBtn = document.querySelector('#scene__pink');
+
+		function scenePink() {
+			localStorage.setItem('scenetheme', 'css/pink.css');
+			let pinkStyle = localStorage.getItem('scenetheme');
+			document.querySelector('#change__style').href = pinkStyle;
+		}
+
+		scenePinkBtn.addEventListener('click', (e) => {
+			scenePink();
+		});
+
+		const sceneBlueBtn = document.querySelector('#scene__blue');
+
+		function sceneBlue() {
+			localStorage.setItem('scenetheme', 'css/blue.css');
+			let pinkStyle = localStorage.getItem('scenetheme');
+			document.querySelector('#change__style').href = pinkStyle;
+		}
+		sceneBlueBtn.addEventListener('click', (e) => {
+			sceneBlue();
+		});
+
+		const sceneOrangeBtn = document.querySelector('#scene__orange');
+
+		function sceneOrange() {
+			localStorage.setItem('scenetheme', 'css/orange.css');
+			let pinkStyle = localStorage.getItem('scenetheme');
+			document.querySelector('#change__style').href = pinkStyle;
+		}
+		sceneOrangeBtn.addEventListener('click', (e) => {
+			sceneOrange();
+		});
+
+		const sceneYellowBtn = document.querySelector('#scene__yellow');
+
+		function sceneYellow() {
+			localStorage.setItem('scenetheme', 'css/yellow.css');
+			let pinkStyle = localStorage.getItem('scenetheme');
+			document.querySelector('#change__style').href = pinkStyle;
+		}
+		sceneYellowBtn.addEventListener('click', (e) => {
+			sceneYellow();
+		});
+
+		const sceneGreenBtn = document.querySelector('#scene__green');
+
+		function sceneGreen() {
+			localStorage.setItem('scenetheme', 'css/green.css');
+			document.querySelector('#change__style').href = localStorage.getItem('scenetheme');
+		}
+		sceneGreenBtn.addEventListener('click', (e) => {
+			sceneGreen();
+		});
+
 	</script>
+
 </body>
 
 </html>
