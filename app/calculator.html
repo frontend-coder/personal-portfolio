@@ -4,12 +4,12 @@
 <head>
 	<meta charset="utf-8" />
 	<!-- <base href="/"> -->
-	<title>Калькулятор услуг для заказчиков: Василенко Олег</title>
+	<title>Калькулятор услуг для заказчиков: Васильченко Игорь</title>
 	<meta name="description"
 		content="Олег Василенко выполнит создание веб-сайта под ключ с нуля ориентируясь на интересы бизнеса заказчика" />
 	<meta name="keywords" content="создать сайт с нуля, верстаю быстрые шаблоны">
 	<meta name="robots" content="index, follow">
-	<meta name="author" content="олег василенко">
+	<meta name="author" content="Игорь Васильченко">
 	<meta name="copyright"
 		content="все права на сайт и размещенные материалы в рамках данного проекта принадлежат олегу василенко">
 	<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
@@ -82,11 +82,12 @@
 					<div class="row">
 						<div class="calculate__contents">
 							<form class="price-form contact-form" id="price-form">
-								<input type="hidden" name="Project name" value="https://frontend-coder.github.io/">
-								<input type="hidden" name="Pagesite" value="Страница калькулятора">
-								<input type="hidden" id="cost-rubl" name="cost-progect-inruble" value="">
-								<input type="hidden" id="cost-grivn" name="cost-progect-ingrivna" value="">
-								<input type="hidden" id="cost-bel-rubl" name="cost-progect-bel-ruble" value="">
+								<input type="hidden" name="Project_name" value="https://frontend-coder.github.io/">
+								<input type="hidden" name="form_subject" value="форма размещена на странице Калькулятор">
+
+								<input type="hidden" id="cost-rubl" name="cost-progect-inruble">
+								<input type="hidden" id="cost-grivn" name="cost-progect-ingrivna">
+								<input type="hidden" id="cost-bel-rubl" name="cost-progect-bel-ruble">
 
 								<div class="success">Ваше сообщение уже получили. Мы выйдем на связь через 20 минут.
 								</div>
@@ -199,8 +200,6 @@
 
 									<!-- выше размещены элементы работы с блогом -->
 
-
-
 									<div class="col_page_wrap" data-name="landing">
 										<div class="col_page_item">
 											<input min="0" type="number" class="input_short" placeholder="0" name="pages-section">
@@ -212,16 +211,6 @@
 									</div>
 									<!-- выше размещены элементы работы с одностраничным сайтом лендинг пейдж -->
 
-
-
-
-
-
-
-
-
-
-
 									<div class="col_page_wrap" data-name="landingplusblog">
 										<div class="col_page_item">
 											<input min="0" type="number" class="input_short" placeholder="0" name="lpb-unique">
@@ -231,7 +220,6 @@
 											<!-- <div class="price_minicalcul"> <span class="price_number_unic"></span> рублей/страница</div> -->
 										</div>
 									</div>
-
 
 									<div class="col_page_wrap" data-name="landingplusblog">
 										<div class="col_page_item">
@@ -243,8 +231,6 @@
 										</div>
 									</div>
 
-
-
 									<div class="col_page_wrap" data-name="landingplusblog">
 										<div class="col_page_item">
 											<input min="0" type="number" class="input_short" placeholder="0" name="lpb-section">
@@ -254,19 +240,6 @@
 											<div class="price_minicalcul"> <span class="price_number"></span> рублей/секция</div>
 										</div>
 									</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 								</div>
 
@@ -374,7 +347,7 @@
 									<div class="dop_option">
 
 										<div class="mobile_sec ">
-											<input id="pixelperfect" type="checkbox" class="checkbox" name="PixelPerfect">
+											<input id="pixelperfect" type="checkbox" class="checkbox" name="PixelPerfect" value="да">
 											<label for="pixelperfect" class="radio-label">PixelPerfect
 												<span class="price_mobile_output">
 													<span class="price_pexelperfect"></span>% от стоимости
@@ -383,7 +356,7 @@
 										</div>
 
 										<div class="mobile_sec">
-											<input id="retinaready" type="checkbox" class="checkbox" name="RetinaReady">
+											<input id="retinaready" type="checkbox" class="checkbox" name="RetinaReady"  value="да" >
 											<label for="retinaready" class="radio-label">Retina Ready
 												<span class="price_mobile_output">
 													<span class="price_retina"></span>% от стоимости
@@ -392,7 +365,7 @@
 										</div>
 
 										<div class="mobile_sec">
-											<input id="animation_blocks" type="checkbox" class="checkbox" name="AnimationBlocks">
+											<input id="animation_blocks" type="checkbox" class="checkbox" name="AnimationBlocks" value="да">
 											<label for="animation_blocks" class="radio-label">Анимация
 												<span class="price_mobile_output">
 													<span class="price_animation"></span>% от стоимости
@@ -401,7 +374,7 @@
 										</div>
 
 										<div class="mobile_sec">
-											<input id="googlepagespeed" type="checkbox" class="checkbox" name="GooglePageSpeed">
+											<input id="googlepagespeed" type="checkbox" class="checkbox" name="GooglePageSpeed" value="да">
 											<label for="googlepagespeed" class="radio-label">Google Page Speed
 												<span class="price_mobile_output">
 													<span class="price_gps"></span>% от стоимости
@@ -410,7 +383,7 @@
 										</div>
 
 										<div class="mobile_sec">
-											<input id="speedwork" type="checkbox" class="checkbox" name="SpeedWork">
+											<input id="speedwork" type="checkbox" class="checkbox" name="SpeedWork" value="да">
 											<label for="speedwork" class="radio-label">Срочная работа
 												<span class="price_mobile_output">
 													<span class="price_speed"></span>% от стоимости
@@ -545,7 +518,7 @@
     });
   };
 
-	validateForms(
+  validateForms(
     '.contact-form',
     {
       famely: {
@@ -556,7 +529,7 @@
 			tel: {
         required: true,
 			},
-      checkbox: {
+			checkbox: {
         required: true,
       },     
     },
@@ -577,22 +550,6 @@
     'send goal',
   );
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<script>
 		let inputsMask = document.querySelector('#your_phone');
 		let im = new Inputmask('+7 (999) 999-99-99');
@@ -611,35 +568,6 @@
 		}
 
 		const links = document.querySelectorAll('.alternate-style');
-
-
-		function funonload() {
-			color = localStorage.setItem('colorTheme', 'blue');
-		}
-		funonload();
-
-		window.addEventListener('storage', function (e) {
-			console.log('change');
-		})
-
-
-
-
-
-		function setActiveStyle(color = localStorage.setItem('colorTheme')) {
-			for (let i = 0; i < links.length; i++) {
-				if (color == links[i].getAttribute('title')) {
-					links[i].removeAttribute('disabled');
-					let colorTheme = links[i].getAttribute('title');
-					console.info(colorTheme);
-					localStorage.setItem('colorTheme', colorTheme);
-				} else {
-					links[i].setAttribute('disabled', 'true');
-
-				}
-			}
-		}
-
 
 		const bodySkin = document.querySelectorAll('.body-skin');
 		localStorage.getItem('bodySkin');
@@ -663,7 +591,6 @@
 
 		// Работа с localStorage
 	</script>
-
 
 	<script>
 		const formCalcul = $('#price-form');
@@ -697,11 +624,11 @@
 		const costMobileOutNine = 50;
 		const costMobileOutMore = 70;
 
-		const costPixelPerfect = 50;
+		const costPixelPerfect = 30;
 		const costRetina = 10;
 		const costGps = 10;
-		const costSpeedWork = 70;
-		const costAnimationBlock = 5;
+		const costSpeedWork = 40;
+		const costAnimationBlock = 3;
 
 		const rubToGrivna = 0.388;
 		const rubToBeruss = 0.034;
@@ -781,38 +708,40 @@
 				indexAdaptivCost = 1;
 				//	costMobileOut = '';
 			}
-
-
-
-
-
 			// Другие индексы
 			let pixelPerfect = 1;
-			if (formData['PixelPerfect'] == 'on') {
+			if (formData['PixelPerfect'] == 'да') {
 				pixelPerfect = (costPixelPerfect / 100) + 1.0;
-				//		console.log(pixelPerfect);
+				} else {
+				pixelPerfect = 1;
 			}
 
 			let animationBlocks = 1;
-			if (formData['AnimationBlocks'] == 'on') {
+			if (formData['AnimationBlocks'] == 'да') {
 				animationBlocks = (costAnimationBlock / 100) + 1.0;
-				//	console.log(animationBlocks);
+			} else {
+				animationBlocks = 1;
 			}
-
-
-			//	console.log(pixelPerfect);
 
 			let retinaReady = 1;
-			if (formData['RetinaReady'] == 'on') {
+			if (formData['RetinaReady'] == 'да') {
 				retinaReady = (costRetina / 100) + 1.0;
+			} else {
+				retinaReady = 1;
 			}
+
 			let googlePageSpeed = 1;
-			if (formData['GooglePageSpeed'] == 'on') {
+			if (formData['GooglePageSpeed'] == 'да') {
 				googlePageSpeed = (costGps / 100) + 1.0;
+			} else {
+				googlePageSpeed = 1;
 			}
+
 			let speedWork = 1;
-			if (formData['SpeedWork'] == 'on') {
+			if (formData['SpeedWork'] == 'да') {
 				speedWork = (costSpeedWork / 100) + 1.0;
+			} else {
+				speedWork = 1;
 			}
 
 			//console.log('pixelPerfect:', pixelPerfect);
@@ -876,10 +805,8 @@
 
 			$('#cost_final span').text(totalPrice);
 			$('#cost-rubl').val(totalPrice);
-
 			$('#cost_final_griv span').text(costProjectToGrivna);
 			$('#cost-grivn').val(costProjectToGrivna);
-
 			$('#cost_final_belrub span').text(costProjectToBeloruss);
 			$('#cost-bel-rubl').val(costProjectToBeloruss);
 

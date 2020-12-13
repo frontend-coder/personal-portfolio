@@ -420,6 +420,7 @@
 
 .about .about-content .skills .skill-item {
   flex: 0 0 100%;
+  margin-bottom: 30px;
   max-width: 100%;
 }
 
@@ -435,15 +436,9 @@
 .about .about-content .skills .skill-item .progress {
   position: relative;
   border-radius: 4px;
-
-  // overflow: hidden;
   width: 100%;
   height: 8px;
   background-color: #e3e3e3;
-}
-
-.about .about-content .skills .skill-item {
-  margin-bottom: 30px;
 }
 
 .about .about-content .skills .skill-item .progress .progress-in {
@@ -1158,31 +1153,34 @@
     font-size: 16px;
     color: #302e4d;
   }
+}
 
-  & ul {
-    display: block;
-    list-style: none;
-    margin: 0;
-    margin-bottom: 5px;
-    padding: 0;
-  }
+.style-switcher ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
 
-  & ul li {
-    display: inline-block;
-  }
+.style-switcher ul li {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
 
-  & ul li a {
-    display: block;
-    margin-right: 2px;
-    width: 30px;
-    height: 30px;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.style-switcher ul li a {
+  display: block;
+  margin-right: 2px;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-  &.open {
-    transform: translateX(0);
-  }
+.style-switcher.open {
+  transform: translateX(0);
 }
 
 body.dark .section {

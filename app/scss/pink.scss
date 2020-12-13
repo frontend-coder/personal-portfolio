@@ -1,4 +1,4 @@
-// Документ pink.css 
+// Документ pink.css
 
 .social-link li a {
   background-color: #ec1839;
@@ -24,13 +24,13 @@ body.dark .aside_left .nav li a:hover,
 }
 
 .blog .blog-item-inner .blog-info .read_more a:hover {
-  color: #ec1839;
   border-bottom: 1px solid #ec1839;
+  color: #ec1839;
 }
 
 .service .service-item .service-item-inner:hover .link .fa,
 .service .service-item .service-item-inner:hover .icon .fa {
-  color: #fff;
+  color: #ffffff;
 }
 
 .contact-form .success,
@@ -39,13 +39,13 @@ body.dark .aside_left .nav li a:hover,
 .blog .blog-item-inner .blog-img .blog-date,
 .service .service-item .service-item-inner:hover .icon,
 .about .about-content .timeline .circle-dot,
-.about .about-content .timeline .timeline-item:before,
+.about .about-content .timeline .timeline-item::before,
 .about .about-content .skills .skill-item .progress .progress-in,
 .btn,
-.section .section-title h2:after,
-.section .section-title h2:before,
-.aside_left .nav-toggler span:after,
-.aside_left .nav-toggler span:before,
+.section .section-title h2::after,
+.section .section-title h2::before,
+.aside_left .nav-toggler span::after,
+.aside_left .nav-toggler span::before,
 .aside_left .nav-toggler span {
   background-color: #ec1839;
 }
@@ -55,42 +55,42 @@ body.dark .portfolio .portfolio-filter button.active,
   border-color: #ec1839;
 }
 
-.logo a:after {
+.logo a::after {
   border-right: 4px solid #ec1839;
   border-bottom: 4px solid #ec1839;
 }
 
-.logo a:before {
+.logo a::before {
   border-top: 4px solid #ec1839;
   border-left: 4px solid #ec1839;
 }
 
-.form-group input[type='checkbox']+.css-label:before,
-.style-switcher input[type='radio']+.radio-label:before,
-.mobile_sec input[type='checkbox']+.radio-label:before,
-.radio input[type='radio']+.radio-label:before {
+.form-group input[type="checkbox"] +.css-label::before,
+.style-switcher .change__thene input[type="radio"] +.radio-label::before,
+.mobile_sec input[type="checkbox"] +.radio-label::before,
+.radio input[type="radio"] +.radio-label::before {
   border: 1px solid #ec1839;
 }
 
-.form-group input[type='checkbox']:checked+.css-label:before,
-.style-switcher input[type='radio']:checked+.radio-label:before,
-.mobile_sec input[type='checkbox']:checked+.radio-label:before,
-.radio input[type='radio']:checked+.radio-label:before {
+.form-group input[type="checkbox"]:checked +.css-label::before,
+.style-switcher .change__thene input[type="radio"]:checked +.radio-label::before,
+.mobile_sec input[type="checkbox"]:checked +.radio-label::before,
+.radio input[type="radio"]:checked +.radio-label::before {
   background-color: #ec1839;
 }
 
-.price-form_item input[type='number'] {
+.price-form_item input[type="number"] {
   border: 1px solid #ec1839;
 }
 
-.price-form_item input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+.price-form_item input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
   border-left: 1px solid #ec1839;
 }
 
-.form-group input[type='checkbox']:focus+.css-label:before,
-.style-switcher input[type='radio']:focus+.radio-label:before,
-.mobile_sec input[type='checkbox']:focus+.radio-label:before,
-.radio input[type='radio']:focus+.radio-label:before {
+.form-group input[type="checkbox"]:focus +.css-label::before,
+.style-switcher .change__thene input[type="radio"]:focus +.radio-label::before,
+.mobile_sec input[type="checkbox"]:focus +.radio-label::before,
+.radio input[type="radio"]:focus +.radio-label::before {
   border-color: #ec1839;
 }
