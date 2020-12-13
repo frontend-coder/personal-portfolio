@@ -65,7 +65,8 @@ body.dark .portfolio .portfolio-filter button.active,
   border-left: 4px solid #ec1839;
 }
 
-.form-group input[type="checkbox"] +.css-label::before,
+.price_name input[type="text"],
+.form-group input[type="checkbox"]:checked +.css-label::before,
 .style-switcher .change__thene input[type="radio"] +.radio-label::before,
 .mobile_sec input[type="checkbox"] +.radio-label::before,
 .radio input[type="radio"] +.radio-label::before {

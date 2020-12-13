@@ -245,7 +245,7 @@ function scripts() {
 }
 
 function images() {
-  return src('app/img/**/*').pipe(newer('dist/img/')).pipe(imagemin()).pipe(dest('dist/img/'));
+  return src('app/img/**/*').pipe(newer('dest/img/')).pipe(imagemin()).pipe(dest('dest/img/'));
 }
 
 function cleanimg() {

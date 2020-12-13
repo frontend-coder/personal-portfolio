@@ -65,12 +65,15 @@ body.dark .portfolio .portfolio-filter button.active,
   border-left: 4px solid #2196f3;
 }
 
+.price_name input[type="text"],
+.form-group input[type="checkbox"]:checked +.css-label::before,
 .style-switcher input[type="radio"] +.radio-label::before,
 .mobile_sec input[type="checkbox"] +.radio-label::before,
 .radio input[type="radio"] +.radio-label::before {
   border: 1px solid #2196f3;
 }
 
+.form-group input[type="checkbox"]:checked +.css-label::before,
 .style-switcher input[type="radio"]:checked +.radio-label::before,
 .mobile_sec input[type="checkbox"]:checked +.radio-label::before,
 .radio input[type="radio"]:checked +.radio-label::before {

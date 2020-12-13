@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 //Даные телеграмм
 $token ='994138058:AAFcqV-6avvCh8z1zMkYDafz3rQhcN8zKGs';
 $chatid = '-354273811';
