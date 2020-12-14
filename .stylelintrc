@@ -543,7 +543,7 @@
 		"custom-property-pattern": null,
 		"declaration-bang-space-after": "never",
 		"declaration-bang-space-before": "always",
-		"declaration-block-no-duplicate-properties": true,
+		"declaration-block-no-duplicate-properties": null,
 		"declaration-block-no-redundant-longhand-properties": true,
 		"declaration-block-no-shorthand-property-overrides": true,
 		"declaration-block-semicolon-newline-after": "always-multi-line",
@@ -772,7 +772,7 @@
 		"scss/operator-no-unspaced": true,
 		"scss/partial-no-import": null,
 		"scss/percent-placeholder-pattern": null,
-		"scss/selector-no-redundant-nesting-selector": true,
+		"scss/selector-no-redundant-nesting-selector": null,
 		"plugin/declaration-block-no-ignored-properties": [
 			true,
 			{

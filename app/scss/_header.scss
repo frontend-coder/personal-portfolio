@@ -906,7 +906,7 @@
   & .blog-title {
     margin-bottom: 10px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 21px;
     text-transform: capitalize;
     color: #302e4d;
   }
@@ -929,12 +929,24 @@
   }
 }
 
+.blog .single-item-inner .blog-info .single-descr h2 {
+  font-size: 18px;
+}
+
 .blog .single-item-inner .blog-info .single-descr p {
   margin-bottom: 15px;
   font-weight: 400;
   font-size: 16px;
   line-height: 25px;
   color: #504e70;
+}
+
+.blog .single-item-inner .blog-info .single-descr ul {
+  list-style: none;
+}
+
+.blog .single-item-inner .blog-info .single-descr ul li {
+  margin-bottom: 10px;
 }
 
 .blog .blog-item-inner .blog-info .read_more a,
@@ -1110,7 +1122,7 @@
 }
 
 .about-content .politiks_content ul li span {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .style-switcher {
@@ -1270,6 +1282,8 @@ body.dark .about .about-content .politiks_content p,
 body.dark .blog .single-item-inner .blog-info .blog-tags,
 body.dark .blog .single-item-inner .blog-info .single-descr p,
 body.dark .blog .single-item-inner .blog-info .blog-title,
+body.dark .blog .single-item-inner .blog-info .single-descr h2,
+body.dark .blog .single-item-inner .blog-info .single-descr ul,
 body.dark .blog .blog-item-inner .blog-info .blog-title,
 body.dark .portfolio .portfolio-filter button,
 body.dark .service .service-item .service-item-inner h4,
